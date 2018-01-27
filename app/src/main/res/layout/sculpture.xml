@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_16"
+    android:background="@drawable/sculpturebg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ1"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <RadioGroup
+                android:id="@+id/sculptureQ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sculptureQ1A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ1A1" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ1A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ1A2" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ1A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ1A3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sculptureQ1Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ2"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/three_graces"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <RadioGroup
+                android:id="@+id/sculptureQ2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sculptureQ2A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ2A1" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ2A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ2A2" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ2A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ2A3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sculptureQ2Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ3"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/the_kiss"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <EditText
+                android:id="@+id/sculptureQ3A1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/sculptureQ3A1"
+                android:focusable="true"
+                android:inputType="textCapWords"/>
+
+            <TextView
+                android:id="@+id/sculptureQ3Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ4"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <RadioGroup
+                android:id="@+id/sculptureQ4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sculptureQ4A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ4A1" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ4A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ4A2" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ4A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ4A3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sculptureQ4Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ5"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <RadioGroup
+                android:id="@+id/sculptureQ5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sculptureQ5A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ5A1" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ5A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ5A2" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ5A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ5A3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sculptureQ5Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ6"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+
+            <RadioGroup
+                android:id="@+id/sculptureQ6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sculptureQ6A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ6A1" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ6A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ6A2" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ6A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ6A3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sculptureQ6Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ7"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/perseus"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <EditText
+                android:id="@+id/sculptureQ7A1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/sculptureQ7A1"
+                android:focusable="true"
+                android:inputType="textCapWords"/>
+
+            <TextView
+                android:id="@+id/sculptureQ7Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ8"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/maman"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <RadioGroup
+                android:id="@+id/sculptureQ8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sculptureQ8A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ8A1" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ8A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ8A2" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ8A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ8A3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sculptureQ8Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ9"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <RadioGroup
+                android:id="@+id/sculptureQ9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sculptureQ9A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ9A1" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ9A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ9A2" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ9A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ9A3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sculptureQ9Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/questionBackground"
+            android:padding="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sculptureQ10"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/david"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"/>
+
+            <RadioGroup
+                android:id="@+id/sculptureQ10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sculptureQ10A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ10A1" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ10A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ10A2" />
+
+                <RadioButton
+                    android:id="@+id/sculptureQ10A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sculptureQ10A3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sculptureQ10Verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <Button
+                android:id="@+id/submitAnswers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/submit_button"
+                android:text="@string/submitAnswers"
+                android:textColor="@color/textWhite"
+                android:onClick="submitAnswers"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

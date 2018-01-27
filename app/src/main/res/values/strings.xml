@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">Art History Quiz</string>
+    <string name="submitAnswers">Submit Answers</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
+    <string name="your_score">You have</string>
+    <string name="from_score">of 10 correct answers!</string>
+
+    <string name="paintingQ1">1. The celling of The Sistine Chapel (located in Vatican) was painted between 1508 and 1512 by:</string>
+    <string name="paintingQ1A1">Michelangelo</string>
+    <string name="paintingQ1A2">Raphael</string>
+    <string name="paintingQ1A3">Leonardo da Vinci</string>
+
+    <string name="paintingQ2">2. Sfumato is one of the techniques used in the renascence painting which was also preferred  by the great Leonardo da Vinci. This technique is used to obtain:</string>
+    <string name="paintingQ2A1">An blur effect</string>
+    <string name="paintingQ2A2">Saturated colors</string>
+    <string name="paintingQ2A3">Sharpness of the painting</string>
+
+    <string name="paintingQ3">3. One of the most important innovations of renascence taken ove by the painting was:</string>
+    <string name="paintingQ3A1">Use of acrylic colors</string>
+    <string name="paintingQ3A2">Addressing religious themes</string>
+    <string name="paintingQ3A3">Linear perspective</string>
+
+    <string name="paintingQ4">4. Parmigianino’s Madonna with the long neck is a representative painting for:</string>
+    <string name="paintingQ4A1">Baroque</string>
+    <string name="paintingQ4A2">Gothic</string>
+    <string name="paintingQ4A3">Mannerism</string>
+
+    <string name="paintingQ5">5. Which is the name of the famous painter who had a troubled friendship with Van Gogh after which he moved and painted in Tahiti?</string>
+    <string name="paintingQ5A1">Cezanne</string>
+    <string name="paintingQ5A2">Rodin</string>
+    <string name="paintingQ5A3">Gauguin</string>
+
+    <string name="paintingQ6">6. Which of the following painters was the contemporary father of psychoanalysis - Sigmund Freud?</string>
+    <string name="paintingQ6A1">Eduard Munch</string>
+    <string name="paintingQ6A2">Wassily Kandinsky</string>
+    <string name="paintingQ6A3">Anthony van Dyck</string>
+
+    <string name="paintingQ7">7. Which is the family relationship between Lucian Freud and Sigmund Freud?</string>
+    <string name="paintingQ7A1">Grandson - Grandfather</string>
+    <string name="paintingQ7A2">Nephew – Uncle</string>
+    <string name="paintingQ7A3">Father - Son</string>
+
+    <string name="paintingQ8">8. The Arnolfini portrait was painted by Jan van Eyck in 1434. The inscription above the mirror on the back wall says:</string>
+    <string name="paintingQ8A1">Jan van Eyck was here</string>
+    <string name="paintingQ8A2">Love knows no boundaries</string>
+    <string name="paintingQ8A3">It is an unreadable inscription</string>
+
+    <string name="paintingQ9">9. Which was the favorite color of the painter Yves Klein?</string>
+    <string name="paintingQ9A1">Yellow</string>
+    <string name="paintingQ9A2">Violet</string>
+    <string name="paintingQ9A3">Blue</string>
+
+    <string name="paintingQ10">10. How many paintings Vincent van Gogh sold during his lifetime?</string>
+    <string name="paintingQ10A1">Write a number</string>
+
+    <string name="sculptureQ1">1. The Statue of Zeus at Olympia is One of the Seven Wonders of the Ancient World. The original sculpture it is preserved and can be seen today at:</string>
+    <string name="sculptureQ1A1">National Gallery – London</string>
+    <string name="sculptureQ1A2">Archeology Museum - Olympia</string>
+    <string name="sculptureQ1A3">Nowhere, it was lost and destroyed</string>
+
+    <string name="sculptureQ2">2. The Author of the statue “The three graces” is:</string>
+    <string name="sculptureQ2A1">Antonio Canova</string>
+    <string name="sculptureQ2A2">Franz Anton Bustelli</string>
+    <string name="sculptureQ2A3">Unknown author from the Classical period of Ancient Greece</string>
+
+    <string name="sculptureQ3">3. The stature from the below image is called “The Kiss” and it was
+        made by one of the most influencial artists who is considered to be the progenitor of modern sculpture.
+        The name of the artist is:</string>
+    <string name="sculptureQ3A1">Write the name here</string>
+
+    <string name="sculptureQ4">4. The famous sculptor Constantin Brancusi was born in:</string>
+    <string name="sculptureQ4A1">Romania</string>
+    <string name="sculptureQ4A2">Hungary</string>
+    <string name="sculptureQ4A3">Bulgaria</string>
+
+    <string name="sculptureQ5">5. Bernini was a well-known italian sculptor and architect related to the period of:</string>
+    <string name="sculptureQ5A1">Romanesque</string>
+    <string name="sculptureQ5A2">Rococo</string>
+    <string name="sculptureQ5A3">Baroque</string>
+
+    <string name="sculptureQ6">6. Fidias was a famous sculptor who worked and lived in the period of:</string>
+    <string name="sculptureQ6A1">Postmodernity</string>
+    <string name="sculptureQ6A2">Greek antiquity</string>
+    <string name="sculptureQ6A3">Mannerism</string>
+
+    <string name="sculptureQ7">7. Perseus with the Head of Medusa is one of the sculptures that can be admired in the Loggia dei Lanzi-Florence. The Author of this statue is:</string>
+    <string name="sculptureQ7A1">Write the name here</string>
+
+    <string name="sculptureQ8">8. The sculpture shown in the image is made by Louise Bourgeois - one of the most important contemporary artists,  best known for her large-scale sculpture and installation art, The title of the work presented here is:</string>
+    <string name="sculptureQ8A1">Araignee</string>
+    <string name="sculptureQ8A2">Rien</string>
+    <string name="sculptureQ8A3">Maman</string>
+
+    <string name="sculptureQ9">9. Michelangelo is considered to be one of the greatest artist of all time. It is known that his relation with Leonardo da Vinci was defined by:</string>
+    <string name="sculptureQ9A1">Rivalry</string>
+    <string name="sculptureQ9A2">Friendship</string>
+    <string name="sculptureQ9A3">Nonexistent</string>
+
+    <string name="sculptureQ10">10. Besides the Pieta and the Celling of the Sistine Chapel, David is one of the most notable works of Michelangelo. This statue can be admired today in:</string>
+    <string name="sculptureQ10A1">Rome</string>
+    <string name="sculptureQ10A2">Bologna</string>
+    <string name="sculptureQ10A3">Florence</string>
+
+    <string name="architectureQ1">1. Which of the four major basilicas is located in Vatican and is considered to be to be the greatest Christian church in the world?</string>
+    <string name="architectureQ1A1">Archbasilica of St. John Lateran</string>
+    <string name="architectureQ1A2">St. Peter\'s Basilica</string>
+    <string name="architectureQ1A3">The Basilica di Santa Maria Maggiore</string>
+
+    <string name="architectureQ2">2. The Florence Cathedral of Santa Maria del Fiore is has the largest brick dome ever constructed. Who is the one that engineered the dome of this cathedral?</string>
+    <string name="architectureQ2A1">Write the name here</string>
+
+    <string name="architectureQ3">3. The Notre-Dame Cathedral located in Paris is a representative building for the:</string>
+    <string name="architectureQ3A1">Gothic architecture</string>
+    <string name="architectureQ3A2">Renaissance architecture</string>
+    <string name="architectureQ3A3">Neoclassical architecture</string>
+
+    <string name="architectureQ4">4. In which country was the Bauhaus School founded (the school was operational between 1919 1933)?</string>
+    <string name="architectureQ4A1">Write the country name here</string>
+
+    <string name="architectureQ5">5. What is the name of the architect who designed the Sagrada Familia basilica located in Barcelona?</string>
+    <string name="architectureQ5A1">Gaudi</string>
+    <string name="architectureQ5A2">Bofill</string>
+    <string name="architectureQ5A3">Calatrava</string>
+
+    <string name="architectureQ6">6. Coliseum is one of the most famous Roman edifices that can be admired in Rome. Relative to the architectural order the exterior columns are:</string>
+    <string name="architectureQ6A1">Doric</string>
+    <string name="architectureQ6A2">Ionic</string>
+    <string name="architectureQ6A3">Corinthian</string>
+
+    <string name="architectureQ7">7. The columns of the Athenian Parthenon Temple are representative for the style:</string>
+    <string name="architectureQ7A1">Doric</string>
+    <string name="architectureQ7A2">Ionic</string>
+    <string name="architectureQ7A3">Corinthian</string>
+
+    <string name="architectureQ8">8. The Parthenon Temple is a peripteral temple. This means that:</string>
+    <string name="architectureQ8A1">The temple has 8 columns</string>
+    <string name="architectureQ8A2">The temple is surrounded by columns</string>
+    <string name="architectureQ8A3">It is an construction designed for public utility</string>
+
+    <string name="architectureQ9">9. The Walt Disney Concert Hall located in Los Angeles was deigned by:</string>
+    <string name="architectureQ9A1">Frank Gehry</string>
+    <string name="architectureQ9A2">Zaza Hadid</string>
+    <string name="architectureQ9A3">Frank Lloyd Wright</string>
+
+    <string name="architectureQ10">10. The Old England building in Brussels, houses today the Museum for Musical Instruments. This building is a classical example for the architectural style known as:</string>
+    <string name="architectureQ10A1">Bauhaus</string>
+    <string name="architectureQ10A2">Art nouveau</string>
+    <string name="architectureQ10A3">Deconstructivism</string>
+
+</resources>
