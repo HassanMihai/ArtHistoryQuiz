@@ -1,6 +1,7 @@
 package com.example.android.arthistoryquiz;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -10,11 +11,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-/**
- * Created by Miai on 1/25/2018.
- */
 
 public class SculptureActivity extends MainActivity {
 
@@ -106,6 +103,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ1Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q1score = 0;
             sculptureQ1Verify.setText(R.string.wrong);
             sculptureQ1Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -116,6 +114,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ2Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q2score = 0;
             sculptureQ2Verify.setText(R.string.wrong);
             sculptureQ2Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -128,6 +127,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ3Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q3score = 0;
             sculptureQ3Verify.setText(R.string.wrong);
             sculptureQ3Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -138,6 +138,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ4Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q4score = 0;
             sculptureQ4Verify.setText(R.string.wrong);
             sculptureQ4Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -148,6 +149,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ5Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q5score = 0;
             sculptureQ5Verify.setText(R.string.wrong);
             sculptureQ5Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -158,6 +160,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ6Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q6score = 0;
             sculptureQ6Verify.setText(R.string.wrong);
             sculptureQ6Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -170,6 +173,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ7Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q7score = 0;
             sculptureQ7Verify.setText(R.string.wrong);
             sculptureQ7Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -180,6 +184,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ8Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q8score = 0;
             sculptureQ8Verify.setText(R.string.wrong);
             sculptureQ8Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -190,6 +195,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ9Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q9score = 0;
             sculptureQ9Verify.setText(R.string.wrong);
             sculptureQ9Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -200,6 +206,7 @@ public class SculptureActivity extends MainActivity {
             sculptureQ10Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q10score = 0;
             sculptureQ10Verify.setText(R.string.wrong);
             sculptureQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -207,8 +214,7 @@ public class SculptureActivity extends MainActivity {
         int sculptureScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
 
         saveScore(sculptureScore);
-
-        Toast.makeText(this, getResources().getString(R.string.your_score) + " " + sculptureScore + " " + getResources().getString(R.string.from_score), Toast.LENGTH_SHORT).show();
+        viewScore(sculptureScore);
     }
 
     /**
@@ -233,5 +239,14 @@ public class SculptureActivity extends MainActivity {
 
         myEditor.putInt("SCULPTURE", score);
         myEditor.commit();
+    }
+
+    /**
+     * This method show the score in ScoreActivity.
+     */
+    public void viewScore(int score) {
+        Intent intent = new Intent(this, ScoreActivity.class);
+        intent.putExtra("SCORE", score);
+        startActivity(intent);
     }
 }

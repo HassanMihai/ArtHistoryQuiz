@@ -1,6 +1,7 @@
 package com.example.android.arthistoryquiz;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -11,11 +12,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-/**
- * Created by Miai on 1/25/2018.
- */
 
 public class ArchitectureActivity extends MainActivity {
 
@@ -111,6 +108,7 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ1Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q1score = 0;
             architectureQ1Verify.setText(R.string.wrong);
             architectureQ1Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -123,6 +121,7 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ2Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q2score = 0;
             architectureQ2Verify.setText(R.string.wrong);
             architectureQ2Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -133,18 +132,20 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ3Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q3score = 0;
             architectureQ3Verify.setText(R.string.wrong);
             architectureQ3Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
 
         String architectureQ4A1Text = architectureQ4A1.getText().toString().toLowerCase();
 
-        if (architectureQ4A1Text.equals("germany")) {
+        if (architectureQ4A1Text.equals("germany") || architectureQ4A1Text.equals("germania")) {
             q4score = 1;
             architectureQ4Verify.setText(R.string.correct);
             architectureQ4Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q4score = 0;
             architectureQ4Verify.setText(R.string.wrong);
             architectureQ4Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -155,6 +156,7 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ5Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q5score = 0;
             architectureQ5Verify.setText(R.string.wrong);
             architectureQ5Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -165,6 +167,7 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ6Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q6score = 0;
             architectureQ6Verify.setText(R.string.wrong);
             architectureQ6Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -175,6 +178,7 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ7Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q7score = 0;
             architectureQ7Verify.setText(R.string.wrong);
             architectureQ7Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -185,6 +189,7 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ8Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q8score = 0;
             architectureQ8Verify.setText(R.string.wrong);
             architectureQ8Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -195,6 +200,7 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ9Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q9score = 0;
             architectureQ9Verify.setText(R.string.wrong);
             architectureQ9Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -205,6 +211,7 @@ public class ArchitectureActivity extends MainActivity {
             architectureQ10Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q10score = 0;
             architectureQ10Verify.setText(R.string.wrong);
             architectureQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -212,8 +219,7 @@ public class ArchitectureActivity extends MainActivity {
         int architectureScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
 
         saveScore(architectureScore);
-
-        Toast.makeText(this, getResources().getString(R.string.your_score) + " " + architectureScore + " " + getResources().getString(R.string.from_score), Toast.LENGTH_SHORT).show();
+        viewScore(architectureScore);
     }
 
     /**
@@ -238,5 +244,14 @@ public class ArchitectureActivity extends MainActivity {
 
         myEditor.putInt("ARCHITECTURE", score);
         myEditor.commit();
+    }
+
+    /**
+     * This method show the score in ScoreActivity.
+     */
+    public void viewScore(int score) {
+        Intent intent = new Intent(this, ScoreActivity.class);
+        intent.putExtra("SCORE", score);
+        startActivity(intent);
     }
 }

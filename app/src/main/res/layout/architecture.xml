@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/padding_16"
-    android:background="@drawable/painting">
+    android:background="@drawable/architecturebg">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:focusableInTouchMode="true" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,8 +67,7 @@
             android:orientation="vertical"
             android:background="@color/questionBackground"
             android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10"
-            android:focusableInTouchMode="true">
+            android:layout_marginBottom="@dimen/margin_10" >
 
             <TextView
                 android:layout_width="match_parent"
@@ -75,6 +75,14 @@
                 android:text="@string/architectureQ2"
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/santa_maria_del_fiore"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <EditText
                 android:id="@+id/architectureQ2A1"
@@ -106,6 +114,14 @@
                 android:text="@string/architectureQ3"
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notre_dame"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/architectureQ3"
@@ -187,6 +203,14 @@
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"/>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sagrada"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
+
             <RadioGroup
                 android:id="@+id/architectureQ5"
                 android:layout_width="match_parent"
@@ -235,6 +259,14 @@
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"/>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/colosseum"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
+
 
             <CheckBox
                 android:id="@+id/architectureQ6A1"
@@ -277,6 +309,14 @@
                 android:text="@string/architectureQ7"
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/parthenon"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/architectureQ7"
@@ -324,13 +364,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/architectureQ8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/arnolfini_portrait"
-                android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"/>
 
             <RadioGroup
@@ -381,6 +414,14 @@
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"/>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/waltdisney"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
+
             <RadioGroup
                 android:id="@+id/architectureQ9"
                 android:layout_width="match_parent"
@@ -428,6 +469,14 @@
                 android:text="@string/architectureQ10"
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/musical_instrument"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/architectureQ10"

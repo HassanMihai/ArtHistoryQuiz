@@ -80,7 +80,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/three_graces"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/sculptureQ2"
@@ -136,7 +137,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/the_kiss"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <EditText
                 android:id="@+id/sculptureQ3A1"
@@ -320,7 +322,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/perseus"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <EditText
                 android:id="@+id/sculptureQ7A1"
@@ -358,7 +361,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/maman"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/sculptureQ8"
@@ -461,7 +465,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/david"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/sculptureQ10"

@@ -20,22 +20,35 @@
         <activity
             android:label="Art History Painting"
             android:name=".PaintingActivity"
+            android:parentActivityName="com.example.android.arthistoryquiz.MainActivity"
             android:launchMode="singleTop" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.arthistoryquiz.MainActivity" />
         </activity>
         <activity
             android:label="Art History Sculpture"
             android:name=".SculptureActivity"
+            android:parentActivityName="com.example.android.arthistoryquiz.MainActivity"
             android:launchMode="singleTop" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.arthistoryquiz.MainActivity" />
         </activity>
         <activity
             android:label="Art History Architecture"
             android:name=".ArchitectureActivity"
+            android:parentActivityName="com.example.android.arthistoryquiz.MainActivity"
             android:launchMode="singleTop" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.arthistoryquiz.MainActivity" />
         </activity>
         <activity
             android:parentActivityName="com.example.android.arthistoryquiz.PaintingActivity"
             android:label="Art History Your Score"
-            android:name="ScoreActivity" >
+            android:name=".ScoreActivity"
+            android:launchMode="singleTop" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.arthistoryquiz.PaintingActivity" />

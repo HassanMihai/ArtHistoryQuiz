@@ -1,10 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Art History Quiz</string>
+    <string name="painting">Painting</string>
+    <string name="architecture">Architecture</string>
+    <string name="sculpture">Sculpture</string>
     <string name="submitAnswers">Submit Answers</string>
     <string name="correct">Correct</string>
     <string name="wrong">Wrong</string>
-    <string name="your_score">You have</string>
-    <string name="from_score">of 10 correct answers!</string>
+    <string name="you_answered">You answered correctly to</string>
+    <string name="of_questions">of 10 questions!</string>
+    <string name="amazing">Amazing!</string>
+    <string name="good">Good!</string>
+    <string name="bad">Not good&#8230;</string>
+    <string name="check_answers">Check your answers!</string>
+    <string name="congratulation">Congratulation!</string>
+    <string name="question_image">Question image</string>
 
     <string name="paintingQ1">1. The celling of The Sistine Chapel (located in Vatican) was painted between 1508 and 1512 by:</string>
     <string name="paintingQ1A1">Michelangelo</string>
@@ -12,7 +22,7 @@
     <string name="paintingQ1A3">Leonardo da Vinci</string>
 
     <string name="paintingQ2">2. Sfumato is one of the techniques used in the renascence painting which was also preferred  by the great Leonardo da Vinci. This technique is used to obtain:</string>
-    <string name="paintingQ2A1">An blur effect</string>
+    <string name="paintingQ2A1">Blur effect</string>
     <string name="paintingQ2A2">Saturated colors</string>
     <string name="paintingQ2A3">Sharpness of the painting</string>
 
@@ -65,9 +75,9 @@
     <string name="sculptureQ2A3">Unknown author from the Classical period of Ancient Greece</string>
 
     <string name="sculptureQ3">3. The stature from the below image is called “The Kiss” and it was
-        made by one of the most influencial artists who is considered to be the progenitor of modern sculpture.
+        made by one of the most influential artists who is considered to be the progenitor of modern sculpture.
         The name of the artist is:</string>
-    <string name="sculptureQ3A1">Write the name here</string>
+    <string name="sculptureQ3A1">Write the name of artist here</string>
 
     <string name="sculptureQ4">4. The famous sculptor Constantin Brancusi was born in:</string>
     <string name="sculptureQ4A1">Romania</string>
@@ -102,7 +112,7 @@
     <string name="sculptureQ10A2">Bologna</string>
     <string name="sculptureQ10A3">Florence</string>
 
-    <string name="architectureQ1">1. Which of the four major basilicas is located in Vatican and is considered to be to be the greatest Christian church in the world?</string>
+    <string name="architectureQ1">1. Which of the three major basilicas is located in Vatican and is considered to be to be the greatest Christian church in the world?</string>
     <string name="architectureQ1A1">Archbasilica of St. John Lateran</string>
     <string name="architectureQ1A2">St. Peter\'s Basilica</string>
     <string name="architectureQ1A3">The Basilica di Santa Maria Maggiore</string>

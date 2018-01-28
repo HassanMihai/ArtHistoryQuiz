@@ -12,11 +12,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-/**
- * Created by Miai on 1/8/2018.
- */
 
 public class PaintingActivity extends MainActivity {
 
@@ -112,6 +108,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ1Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q1score = 0;
             paintingQ1Verify.setText(R.string.wrong);
             paintingQ1Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -122,6 +119,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ2Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q2score = 0;
             paintingQ2Verify.setText(R.string.wrong);
             paintingQ2Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -132,6 +130,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ3Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q3score = 0;
             paintingQ3Verify.setText(R.string.wrong);
             paintingQ3Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -142,6 +141,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ4Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q4score = 0;
             paintingQ4Verify.setText(R.string.wrong);
             paintingQ4Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -152,6 +152,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ5Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q5score = 0;
             paintingQ5Verify.setText(R.string.wrong);
             paintingQ5Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -162,6 +163,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ6Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q6score = 0;
             paintingQ6Verify.setText(R.string.wrong);
             paintingQ6Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -172,6 +174,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ7Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q7score = 0;
             paintingQ7Verify.setText(R.string.wrong);
             paintingQ7Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -182,6 +185,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ8Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q8score = 0;
             paintingQ8Verify.setText(R.string.wrong);
             paintingQ8Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -192,6 +196,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ9Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q9score = 0;
             paintingQ9Verify.setText(R.string.wrong);
             paintingQ9Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -204,6 +209,7 @@ public class PaintingActivity extends MainActivity {
             paintingQ10Verify.setTextColor(getResources().getColor(R.color.correct));
         }
         else {
+            q10score = 0;
             paintingQ10Verify.setText(R.string.wrong);
             paintingQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -239,8 +245,10 @@ public class PaintingActivity extends MainActivity {
         myEditor.commit();
     }
 
+    /**
+     * This method show the score in ScoreActivity.
+     */
     public void viewScore(int score) {
-
         Intent intent = new Intent(this, ScoreActivity.class);
         intent.putExtra("SCORE", score);
         startActivity(intent);

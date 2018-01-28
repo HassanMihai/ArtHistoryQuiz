@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test Istoria Artei</string>
+    <string name="painting">Pictura</string>
+    <string name="architecture">Arhitectura</string>
+    <string name="sculpture">Sculptura</string>
+    <string name="submitAnswers">Trimite Raspunsurile</string>
+    <string name="correct">Corect</string>
+    <string name="wrong">Gresit</string>
+    <string name="you_answered">Ai raspuns corect la</string>
+    <string name="of_questions">din 10 intrebari!</string>
+    <string name="amazing">Uimitor!</string>
+    <string name="good">Bine!</string>
+    <string name="bad">Nu este bine&#8230;</string>
+    <string name="check_answers">Verifica raspunsurile tale!</string>
+    <string name="congratulation">Felicitari!</string>
+    <string name="question_image">Imagine intrebare</string>
+
+    <string name="paintingQ1">1. Tavanul Capelei Sixtine aflate la Vatican, a fost pictat in perioada 1508 and 1512 de:</string>
+    <string name="paintingQ1A1">Michelangelo</string>
+    <string name="paintingQ1A2">Raphael</string>
+    <string name="paintingQ1A3">Leonardo da Vinci</string>
+
+    <string name="paintingQ2">2. Sfumato este o tehnica folosita in pictura renascentista, preferata si de marele Leonardo da Vinci. Prin aceasta tehnica se obtine efectul de:</string>
+    <string name="paintingQ2A1">Blurare</string>
+    <string name="paintingQ2A2">Saturare</string>
+    <string name="paintingQ2A3">Clarificare</string>
+
+    <string name="paintingQ3">3. Una dintre cele mai importante inovatii aduse de renastere in pictura a fost:</string>
+    <string name="paintingQ3A1">Utilizarea culorilor acrilice</string>
+    <string name="paintingQ3A2">Abordarea unor teme religioase</string>
+    <string name="paintingQ3A3">Perspectiva liniara</string>
+
+    <string name="paintingQ4">4. Madonna cu gat lung a lui Parmigianino, este o pictura reprezentativa pentru curentul:</string>
+    <string name="paintingQ4A1">Baroc</string>
+    <string name="paintingQ4A2">Gotic</string>
+    <string name="paintingQ4A3">Manierism</string>
+
+    <string name="paintingQ5">5. Care este numele celebrului pictor care a avut o relatie tulburata de prietenie cu Van Gogh si care, ulterior, a trait si a creat in Tahiti?</string>
+    <string name="paintingQ5A1">Cezanne</string>
+    <string name="paintingQ5A2">Rodin</string>
+    <string name="paintingQ5A3">Gauguin</string>
+
+    <string name="paintingQ6">6. Cu care din urmatorii pictori a fost contemporan parintele psihanalizei - Sigmund Freud?</string>
+    <string name="paintingQ6A1">Eduard Munch</string>
+    <string name="paintingQ6A2">Wassily Kandinsky</string>
+    <string name="paintingQ6A3">Anthony van Dyck</string>
+
+    <string name="paintingQ7">7. Relatia de rudenie dintre marele pictor Lucian Freud si Sigmund Freud era de:</string>
+    <string name="paintingQ7A1">Nepot - Bunic</string>
+    <string name="paintingQ7A2">Nepot – Unchi</string>
+    <string name="paintingQ7A3">Tata - Fiu</string>
+
+    <string name="paintingQ8">8. Portretul sotilor Arnolfini a fost pictat de Jan van Eyck in 1434. Mesajul inscriptionat deasupra oglinzii din fundal este:</string>
+    <string name="paintingQ8A1">Jan van Eyck a fost aici</string>
+    <string name="paintingQ8A2">Iubirea nu cunoaste limite</string>
+    <string name="paintingQ8A3">Este o inscriptie indescifrabila</string>
+
+    <string name="paintingQ9">9. Care a fost culoarea favorita a pictorului Yves Klein?</string>
+    <string name="paintingQ9A1">Galben</string>
+    <string name="paintingQ9A2">Violet</string>
+    <string name="paintingQ9A3">Albastru</string>
+
+    <string name="paintingQ10">10. Cate picturi a vandut Vincent van Gogh in intreaga sa viata?</string>
+    <string name="paintingQ10A1">Scrie o cifra</string>
+
+    <string name="sculptureQ1">1. Statuia lui Zeus din Olimpia este una din cele 7 minuni ale lumii antice. Originalul se pastreaza si poate fi vazut astazi la:</string>
+    <string name="sculptureQ1A1">National Gallery din Londra</string>
+    <string name="sculptureQ1A2">Muzeul de Arheologie din Olimpia</string>
+    <string name="sculptureQ1A3">Nicaieri, a fost pierduta si distrusa</string>
+
+    <string name="sculptureQ2">2. Autorul sculpturii “Cele 3 gratii” este:</string>
+    <string name="sculptureQ2A1">Antonio Canova</string>
+    <string name="sculptureQ2A2">Franz Anton Bustelli</string>
+    <string name="sculptureQ2A3">Autor necunoscut din perioada clasica de apogeu a Greciei Antice</string>
+
+    <string name="sculptureQ3">3. Sculptura din imaginea alaturata se numeste “Sarutul” si este realizata de unul dintre cei mai influenti artisti care a pus bazele sculpturii moderne.</string>
+    <string name="sculptureQ3A1">Scrie numele artistului aici</string>
+
+    <string name="sculptureQ4">4. Faimosul sculptor Constantin Brancusi este originar din:</string>
+    <string name="sculptureQ4A1">Romania</string>
+    <string name="sculptureQ4A2">Ungaria</string>
+    <string name="sculptureQ4A3">Bulgaria</string>
+
+    <string name="sculptureQ5">5. Bernini a fost un cunoscut sculptor si arhitect italian al perioadei:</string>
+    <string name="sculptureQ5A1">Romanice</string>
+    <string name="sculptureQ5A2">Rococo</string>
+    <string name="sculptureQ5A3">Baroc</string>
+
+    <string name="sculptureQ6">6. Fidias este un celebru sculptor al perioadei:</string>
+    <string name="sculptureQ6A1">Postmoderne</string>
+    <string name="sculptureQ6A2">Antichitatii grecesti</string>
+    <string name="sculptureQ6A3">Manierismului</string>
+
+    <string name="sculptureQ7">7. Perseu cu capul meduzei este una din sculpturile care pot fi admirate in Loggia dei Lanzi din Florenta. Autorul acestei sculpturi este:</string>
+    <string name="sculptureQ7A1">Scrie numele aici</string>
+
+    <string name="sculptureQ8">8. Sculptura din imagine este realizata de Louise Bourgeois- una dintre cele mai importante artiste contemporane, cunoscuta pentru imensele ei sculpturi si instalatii . Titlul lucrarii prezentate aici este:</string>
+    <string name="sculptureQ8A1">Araignee</string>
+    <string name="sculptureQ8A2">Rien</string>
+    <string name="sculptureQ8A3">Maman</string>
+
+    <string name="sculptureQ9">9. Michelangelo este considerat  unul dintre cei mai mari artisti ai tuturor timpurilor. Este cunoscut faptul ca relatia dintre el si Leonardo da Vinci a fost una de:</string>
+    <string name="sculptureQ9A1">Rivalitate</string>
+    <string name="sculptureQ9A2">Prietenie</string>
+    <string name="sculptureQ9A3">Nici una</string>
+
+    <string name="sculptureQ10">10. Alaturi de Pieta si tavanul Capelei Sixtine , David este una dintre cele mai faimoase opere realizate de Michelangelo. Aceasta statuie poate fi admirata astazi in:</string>
+    <string name="sculptureQ10A1">Roma</string>
+    <string name="sculptureQ10A2">Bologna</string>
+    <string name="sculptureQ10A3">Florenta</string>
+
+    <string name="architectureQ1">1. Care dintre cele 3 bazilici patriarhale se afla in Vatican si este considerata ce mai mare biserica crestina din lume?</string>
+    <string name="architectureQ1A1">Bazilica Sfantul Ioan din Lateran </string>
+    <string name="architectureQ1A2">Bazilica Sfantul Petru</string>
+    <string name="architectureQ1A3">Bazilica Santa Maria Maggiore</string>
+
+    <string name="architectureQ2">2. Catedrala Santa Maria del Fiore din Florenta are cea mai mare cupola contruit vreodata din caramizi.  Cine este cel care a proiectat cupola acestei catedrale?</string>
+    <string name="architectureQ2A1">Scrie numele aici</string>
+
+    <string name="architectureQ3">3. Catedrala Notre Dame din Paris este o cladire reprezentativa pentru arhitectura:</string>
+    <string name="architectureQ3A1">Gotica</string>
+    <string name="architectureQ3A2">Renascentista</string>
+    <string name="architectureQ3A3">Neoclasica</string>
+
+    <string name="architectureQ4">4. In ce tara a fost fondata scoala Bauhaus (functionala intre 1919 1933)?</string>
+    <string name="architectureQ4A1">Scrie numele tarii aici</string>
+
+    <string name="architectureQ5">5. Cum se numeste arhitectul care a proiectat bazilica Sagrada Familia din Barcelona?</string>
+    <string name="architectureQ5A1">Gaudi</string>
+    <string name="architectureQ5A2">Bofill</string>
+    <string name="architectureQ5A3">Calatrava</string>
+
+    <string name="architectureQ6">6. Colosseumul este unul dintre cele mai faimoase edificii romane si poate fi admirat la Roma. Ordinul arhitectural al coloanelor care pot fi vazute la exterior este:</string>
+    <string name="architectureQ6A1">Doric</string>
+    <string name="architectureQ6A2">Ionic</string>
+    <string name="architectureQ6A3">Corintic</string>
+
+    <string name="architectureQ7">7. Coloanele templului Partenon din Atena sunt reprezentative pentru stilul:</string>
+    <string name="architectureQ7A1">Doric</string>
+    <string name="architectureQ7A2">Ionic</string>
+    <string name="architectureQ7A3">Corintic</string>
+
+    <string name="architectureQ8">8. Partenonul este un templu peripter. Aceasta inseamna ca:</string>
+    <string name="architectureQ8A1">Templul are 8 coloane</string>
+    <string name="architectureQ8A2">Templul este inconjurat de coloane</string>
+    <string name="architectureQ8A3">Este o constructie de utilitate publica</string>
+
+    <string name="architectureQ9">9. Sala de concerte Walt Disney din Los Angeles a fost proiectata de:</string>
+    <string name="architectureQ9A1">Frank Gehry</string>
+    <string name="architectureQ9A2">Zaza Hadid</string>
+    <string name="architectureQ9A3">Frank Lloyd Wright</string>
+
+    <string name="architectureQ10">10. Cladirea Vechea Anglie, din Bruxelles, gazduieste astazi Muzeul Instrumentelor muzicale. Aceasta este un exemplu clasic pentru stilul arhitectural:</string>
+    <string name="architectureQ10A1">Bauhaus</string>
+    <string name="architectureQ10A2">Art nouveau</string>
+    <string name="architectureQ10A3">Deconstructivism</string>
+
+</resources>

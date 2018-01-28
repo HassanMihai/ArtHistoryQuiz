@@ -44,11 +44,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onRestart()
-    {
-        super.onRestart();
-        finish();
-        startActivity(getIntent());
+    public void onResume() {
+        super.onResume();
+
+        SharedPreferences myPreferences
+                = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+
+        int pScore = myPreferences.getInt("PAINTING", 0);
+
+        int sScore = myPreferences.getInt("SCULPTURE", 0);
+
+        int aScore = myPreferences.getInt("ARCHITECTURE", 0);
+
+        String paintingScore = pScore + "/10";
+        String sculptureScore = sScore + "/10";
+        String architectureScore = aScore + "/10";
+
+        paintingScoreTV.setText(paintingScore);
+
+        sculptureScoreTV.setText(sculptureScore);
+
+        architectureScoreTV.setText(architectureScore);
     }
 
     public void paintingQuiz(View view) {
@@ -65,5 +81,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ArchitectureActivity.class);
         startActivity(intent);
     }
-
 }

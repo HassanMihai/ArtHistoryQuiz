@@ -31,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/sistine_chapel"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/paintingQ1"
@@ -185,7 +186,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/madonna_dal_collo_lungo"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/paintingQ4"
@@ -379,7 +381,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/arnolfini_portrait"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:layout_marginBottom="@dimen/margin_8"
+                android:contentDescription="@string/question_image"/>
 
             <RadioGroup
                 android:id="@+id/paintingQ8"

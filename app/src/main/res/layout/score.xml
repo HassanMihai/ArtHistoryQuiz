@@ -3,19 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.android.arthistoryquiz.MainActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/background"
-        android:scaleType="centerCrop"/>
 
     <TextView
-        android:id="@+id/score_text"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/emote_image"
+        android:id="@+id/congratulation_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textColor="@color/textWhite"/>
+        android:textSize="@dimen/text_26"/>
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/emote_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_30"
+        android:src="@drawable/great" />
+
+    <TextView
+        android:layout_below="@id/emote_image"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/score_text"
+        android:id="@+id/check_answers_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="" />
 
 </RelativeLayout>
