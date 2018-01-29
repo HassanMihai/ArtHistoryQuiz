@@ -102,6 +102,10 @@ public class PaintingActivity extends MainActivity {
         paintingQ10Verify = findViewById(R.id.paintingQ10Verify);
     }
 
+    /**
+     * This method saves the state of textView that displays if the
+     * answers are correct or wrong.
+     */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -117,6 +121,10 @@ public class PaintingActivity extends MainActivity {
         outState.putString(QUESTION_TEN, q10check);
     }
 
+    /**
+     * This method restores the state of textView that displays if the
+     * answers are correct or wrong.
+     */
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -160,7 +168,7 @@ public class PaintingActivity extends MainActivity {
     }
 
     /**
-     * This method checks the answers and setText if answers are correct or wrong.
+     * This method checks the answers if are correct or wrong.
      */
     public void submitAnswers(View view) {
 
@@ -316,6 +324,9 @@ public class PaintingActivity extends MainActivity {
         startActivity(intent);
     }
 
+    /**
+     * This method sets and display text if answer for question 1 is correct or wrong.
+     */
     public void displayQ1Check() {
         if (q1check.equals(getResources().getString(R.string.correct))){
             paintingQ1Verify.setText(q1check);
@@ -330,6 +341,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 2 is correct or wrong.
+     */
     public void displayQ2Check() {
         if (q2check.equals(getResources().getString(R.string.correct))){
             paintingQ2Verify.setText(q2check);
@@ -344,6 +358,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 3 is correct or wrong.
+     */
     public void displayQ3Check() {
         if (q3check.equals(getResources().getString(R.string.correct))){
             paintingQ3Verify.setText(q3check);
@@ -358,6 +375,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 4 is correct or wrong.
+     */
     public void displayQ4Check() {
         if (q4check.equals(getResources().getString(R.string.correct))){
             paintingQ4Verify.setText(q4check);
@@ -372,6 +392,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 5 is correct or wrong.
+     */
     public void displayQ5Check() {
         if (q5check.equals(getResources().getString(R.string.correct))){
             paintingQ5Verify.setText(q5check);
@@ -386,6 +409,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 6 is correct or wrong.
+     */
     public void displayQ6Check() {
         if (q6check.equals(getResources().getString(R.string.correct))){
             paintingQ6Verify.setText(q5check);
@@ -401,6 +427,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 7 is correct or wrong.
+     */
     public void displayQ7Check() {
         if (q7check.equals(getResources().getString(R.string.correct))){
             paintingQ7Verify.setText(q7check);
@@ -415,6 +444,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 8 is correct or wrong.
+     */
     public void displayQ8Check() {
         if (q8check.equals(getResources().getString(R.string.correct))){
             paintingQ8Verify.setText(q8check);
@@ -429,6 +461,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 9 is correct or wrong.
+     */
     public void displayQ9Check() {
         if (q9check.equals(getResources().getString(R.string.correct))){
             paintingQ9Verify.setText(q9check);
@@ -443,6 +478,9 @@ public class PaintingActivity extends MainActivity {
         }
     }
 
+    /**
+     * This method sets and display text if answer for question 10 is correct or wrong.
+     */
     public void displayQ10Check() {
         if (q10check.equals(getResources().getString(R.string.correct))){
             paintingQ10Verify.setText(q10check);
