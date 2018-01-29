@@ -304,7 +304,7 @@ public class ArchitectureActivity extends MainActivity {
     }
 
     /**
-     * This method save the score on SharedPreferences.
+     * This method save the last score on SharedPreferences.
      */
     public void saveScore(int score) {
         SharedPreferences myPreferences

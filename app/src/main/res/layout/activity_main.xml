@@ -8,117 +8,119 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/background"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:gravity="center_horizontal"
+        android:orientation="horizontal"
         android:padding="@dimen/padding_16">
 
         <LinearLayout
             android:layout_width="@dimen/width_0"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_margin="@dimen/margin_3"
-            android:padding="@dimen/padding_4"
+            android:layout_weight="1"
             android:background="@color/categoryColorButton"
-            android:onClick="paintingQuiz">
+            android:gravity="center_horizontal"
+            android:onClick="paintingQuiz"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/picasso"/>
+                android:src="@drawable/picasso" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/painting"
-                android:textColor="@color/textWhite"
                 android:textAllCaps="true"
-                android:textSize="@dimen/text_12"/>
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/text_12" />
+
             <TextView
                 android:id="@+id/paintingScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textColor="@color/textWhite"
                 android:textAllCaps="true"
-                android:textSize="@dimen/text_12"/>
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/text_12" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="@dimen/width_0"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_margin="@dimen/margin_3"
-            android:padding="@dimen/padding_4"
+            android:layout_weight="1"
             android:background="@color/categoryColorButton"
-            android:onClick="sculptureQuiz">
+            android:gravity="center_horizontal"
+            android:onClick="sculptureQuiz"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/sculpture"/>
+                android:src="@drawable/sculpture" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sculpture"
-                android:textColor="@color/textWhite"
                 android:textAllCaps="true"
-                android:textSize="@dimen/text_12"/>
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/text_12" />
+
             <TextView
                 android:id="@+id/sculptureScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textColor="@color/textWhite"
                 android:textAllCaps="true"
-                android:textSize="@dimen/text_12"/>
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/text_12" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="@dimen/width_0"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_margin="@dimen/margin_3"
-            android:padding="@dimen/padding_4"
+            android:layout_weight="1"
             android:background="@color/categoryColorButton"
-            android:onClick="architectureQuiz">
+            android:gravity="center_horizontal"
+            android:onClick="architectureQuiz"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/museum"/>
+                android:src="@drawable/museum" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/architecture"
-                android:textColor="@color/textWhite"
                 android:textAllCaps="true"
-                android:textSize="@dimen/text_12"/>
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/text_12" />
 
             <TextView
                 android:id="@+id/architectureScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textColor="@color/textWhite"
                 android:textAllCaps="true"
-                android:textSize="@dimen/text_12"/>
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/text_12" />
 
         </LinearLayout>
 

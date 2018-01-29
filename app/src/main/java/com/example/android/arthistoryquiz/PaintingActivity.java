@@ -303,7 +303,7 @@ public class PaintingActivity extends MainActivity {
     }
 
     /**
-     * This method save the score on SharedPreferences.
+     * This method save the last score on SharedPreferences.
      */
     public void saveScore(int score) {
         SharedPreferences myPreferences
@@ -489,7 +489,7 @@ public class PaintingActivity extends MainActivity {
         else if (q10check.equals(getResources().getString(R.string.wrong))) {
             String q10wrong = q10check;
             q10wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q10wrong += " " + getResources().getString(R.string.paintingQ10A);
+            q10wrong += " " +  getResources().getString(R.string.paintingQ10A);
             paintingQ10Verify.setText(q10wrong);
             paintingQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
         }

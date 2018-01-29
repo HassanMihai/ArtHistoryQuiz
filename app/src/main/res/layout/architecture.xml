@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding_16"
-    android:background="@drawable/architecturebg">
+    android:background="@drawable/architecturebg"
+    android:padding="@dimen/padding_16">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:focusableInTouchMode="true" >
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ1"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ1" />
 
             <RadioGroup
                 android:id="@+id/architectureQ1"
@@ -56,72 +55,70 @@
                 android:id="@+id/architectureQ1Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
-
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10" >
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ2"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ2" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/santa_maria_del_fiore"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"
-                android:contentDescription="@string/question_image"/>
+                android:contentDescription="@string/question_image"
+                android:src="@drawable/santa_maria_del_fiore" />
 
             <EditText
                 android:id="@+id/architectureQ2A1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/architectureQ2A1"
-                android:inputType="textCapWords"/>
+                android:inputType="textCapWords" />
 
             <TextView
                 android:id="@+id/architectureQ2Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
-
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ3"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ3" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/notre_dame"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"
-                android:contentDescription="@string/question_image"/>
+                android:contentDescription="@string/question_image"
+                android:src="@drawable/notre_dame" />
 
             <RadioGroup
                 android:id="@+id/architectureQ3"
@@ -152,7 +149,7 @@
                 android:id="@+id/architectureQ3Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="" />
 
 
         </LinearLayout>
@@ -160,56 +157,56 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ4"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ4" />
 
             <EditText
                 android:id="@+id/architectureQ4A1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/architectureQ4A1"
                 android:focusable="true"
-                android:inputType="textCapWords"/>
+                android:hint="@string/architectureQ4A1"
+                android:inputType="textCapWords" />
 
             <TextView
                 android:id="@+id/architectureQ4Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ5"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ5" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/sagrada"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"
-                android:contentDescription="@string/question_image"/>
+                android:contentDescription="@string/question_image"
+                android:src="@drawable/sagrada" />
 
             <RadioGroup
                 android:id="@+id/architectureQ5"
@@ -240,33 +237,32 @@
                 android:id="@+id/architectureQ5Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ6"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ6" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/colosseum"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"
-                android:contentDescription="@string/question_image"/>
-
+                android:contentDescription="@string/question_image"
+                android:src="@drawable/colosseum" />
 
             <CheckBox
                 android:id="@+id/architectureQ6A1"
@@ -290,33 +286,32 @@
                 android:id="@+id/architectureQ6Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
-
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ7"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ7" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/parthenon"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"
-                android:contentDescription="@string/question_image"/>
+                android:contentDescription="@string/question_image"
+                android:src="@drawable/parthenon" />
 
             <RadioGroup
                 android:id="@+id/architectureQ7"
@@ -347,24 +342,24 @@
                 android:id="@+id/architectureQ7Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ8"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ8" />
 
             <RadioGroup
                 android:id="@+id/architectureQ8"
@@ -395,32 +390,32 @@
                 android:id="@+id/architectureQ8Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ9"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ9" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/waltdisney"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"
-                android:contentDescription="@string/question_image"/>
+                android:contentDescription="@string/question_image"
+                android:src="@drawable/waltdisney" />
 
             <RadioGroup
                 android:id="@+id/architectureQ9"
@@ -451,32 +446,32 @@
                 android:id="@+id/architectureQ9Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_10"
             android:background="@color/questionBackground"
-            android:padding="@dimen/padding_16"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/architectureQ10"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_8"/>
+                android:text="@string/architectureQ10" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/musical_instrument"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/margin_8"
-                android:contentDescription="@string/question_image"/>
+                android:contentDescription="@string/question_image"
+                android:src="@drawable/musical_instrument" />
 
             <RadioGroup
                 android:id="@+id/architectureQ10"
@@ -507,24 +502,24 @@
                 android:id="@+id/architectureQ10Verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="@dimen/margin_10">
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/submitAnswers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/submit_button"
+                android:onClick="submitAnswers"
                 android:text="@string/submitAnswers"
-                android:textColor="@color/textWhite"
-                android:onClick="submitAnswers"/>
+                android:textColor="@color/textWhite" />
 
         </LinearLayout>
 

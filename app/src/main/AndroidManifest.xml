@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-                  android:launchMode="singleTop">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +23,7 @@
             android:label="Art History Painting"
             android:name=".PaintingActivity"
             android:parentActivityName="com.example.android.arthistoryquiz.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -30,6 +33,7 @@
             android:label="Art History Sculpture"
             android:name=".SculptureActivity"
             android:parentActivityName="com.example.android.arthistoryquiz.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -39,6 +43,7 @@
             android:label="Art History Architecture"
             android:name=".ArchitectureActivity"
             android:parentActivityName="com.example.android.arthistoryquiz.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -47,6 +52,7 @@
         <activity
             android:label="Art History Your Score"
             android:name=".ScoreActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop" >
         </activity>
     </application>
