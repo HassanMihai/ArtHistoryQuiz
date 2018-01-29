@@ -2,6 +2,7 @@ package com.example.android.arthistoryquiz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -9,12 +10,14 @@ import android.widget.TextView;
  * Created by Miai on 1/27/2018.
  */
 
-public class ScoreActivity extends PaintingActivity{
+public class ScoreActivity extends MainActivity{
 
     ImageView emoteIV;
     TextView congratTV;
     TextView scoreTV;
     TextView checkAnswersTV;
+
+    int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,7 @@ public class ScoreActivity extends PaintingActivity{
         setContentView(R.layout.score);
 
         Intent mIntent = getIntent();
-        int score = mIntent.getIntExtra("SCORE", 0);
+        score = mIntent.getIntExtra("SCORE", 0);
 
         emoteIV = findViewById(R.id.emote_image);
         congratTV = findViewById(R.id.congratulation_text);
@@ -58,5 +61,16 @@ public class ScoreActivity extends PaintingActivity{
         yourScore += " " + getResources().getString(R.string.of_questions);
 
         scoreTV.setText(yourScore);
+    }
+
+    public void verifyAnswers(View view){
+        if (score == 10) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        else {
+            finish();
+        }
     }
 }

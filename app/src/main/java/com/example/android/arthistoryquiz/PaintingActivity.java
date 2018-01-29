@@ -51,6 +51,28 @@ public class PaintingActivity extends MainActivity {
     int q9score = 0;
     int q10score = 0;
 
+    static final String QUESTION_ONE = "q1check";
+    static final String QUESTION_TWO = "q2check";
+    static final String QUESTION_THREE = "q3check";
+    static final String QUESTION_FOUR = "q4check";
+    static final String QUESTION_FIVE = "q5check";
+    static final String QUESTION_SIX = "q6check";
+    static final String QUESTION_SEVEN = "q7check";
+    static final String QUESTION_EIGHT = "q8check";
+    static final String QUESTION_NINE = "q9check";
+    static final String QUESTION_TEN = "q10check";
+
+    String q1check = "";
+    String q2check = "";
+    String q3check = "";
+    String q4check = "";
+    String q5check = "";
+    String q6check = "";
+    String q7check = "";
+    String q8check = "";
+    String q9check = "";
+    String q10check = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +102,46 @@ public class PaintingActivity extends MainActivity {
         paintingQ10Verify = findViewById(R.id.paintingQ10Verify);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(QUESTION_ONE, q1check);
+        outState.putString(QUESTION_TWO, q2check);
+        outState.putString(QUESTION_THREE, q3check);
+        outState.putString(QUESTION_FOUR, q4check);
+        outState.putString(QUESTION_FIVE, q5check);
+        outState.putString(QUESTION_SIX, q6check);
+        outState.putString(QUESTION_SEVEN, q7check);
+        outState.putString(QUESTION_EIGHT, q8check);
+        outState.putString(QUESTION_NINE, q9check);
+        outState.putString(QUESTION_TEN, q10check);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        q1check = savedInstanceState.getString(QUESTION_ONE);
+        q2check = savedInstanceState.getString(QUESTION_TWO);
+        q3check = savedInstanceState.getString(QUESTION_THREE);
+        q4check = savedInstanceState.getString(QUESTION_FOUR);
+        q5check = savedInstanceState.getString(QUESTION_FIVE);
+        q6check = savedInstanceState.getString(QUESTION_SIX);
+        q7check = savedInstanceState.getString(QUESTION_SEVEN);
+        q8check = savedInstanceState.getString(QUESTION_EIGHT);
+        q9check = savedInstanceState.getString(QUESTION_NINE);
+        q10check = savedInstanceState.getString(QUESTION_TEN);
+        displayQ1Check();
+        displayQ2Check();
+        displayQ3Check();
+        displayQ4Check();
+        displayQ5Check();
+        displayQ6Check();
+        displayQ7Check();
+        displayQ8Check();
+        displayQ9Check();
+        displayQ10Check();
+    }
+
     /**
      * This method hides keyboard when EditText lose focus.
      */
@@ -104,114 +166,114 @@ public class PaintingActivity extends MainActivity {
 
         if (paintingQ1A1.isChecked()) {
             q1score = 1;
-            paintingQ1Verify.setText(R.string.correct);
-            paintingQ1Verify.setTextColor(getResources().getColor(R.color.correct));
+            q1check = getResources().getString(R.string.correct);
+            displayQ1Check();
         }
         else {
             q1score = 0;
-            paintingQ1Verify.setText(R.string.wrong);
-            paintingQ1Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q1check = getResources().getString(R.string.wrong);
+            displayQ1Check();
         }
 
         if (paintingQ2A1.isChecked()) {
             q2score = 1;
-            paintingQ2Verify.setText(R.string.correct);
-            paintingQ2Verify.setTextColor(getResources().getColor(R.color.correct));
+            q2check = getResources().getString(R.string.correct);
+            displayQ2Check();
         }
         else {
             q2score = 0;
-            paintingQ2Verify.setText(R.string.wrong);
-            paintingQ2Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q2check = getResources().getString(R.string.wrong);
+            displayQ2Check();
         }
 
         if (paintingQ3A3.isChecked()) {
             q3score = 1;
-            paintingQ3Verify.setText(R.string.correct);
-            paintingQ3Verify.setTextColor(getResources().getColor(R.color.correct));
+            q3check = getResources().getString(R.string.correct);
+            displayQ3Check();
         }
         else {
             q3score = 0;
-            paintingQ3Verify.setText(R.string.wrong);
-            paintingQ3Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q3check = getResources().getString(R.string.wrong);
+            displayQ3Check();
         }
 
         if (paintingQ4A3.isChecked()) {
             q4score = 1;
-            paintingQ4Verify.setText(R.string.correct);
-            paintingQ4Verify.setTextColor(getResources().getColor(R.color.correct));
+            q4check = getResources().getString(R.string.correct);
+            displayQ4Check();
         }
         else {
             q4score = 0;
-            paintingQ4Verify.setText(R.string.wrong);
-            paintingQ4Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q4check = getResources().getString(R.string.wrong);
+            displayQ4Check();
         }
 
         if (paintingQ5A3.isChecked()) {
             q5score = 1;
-            paintingQ5Verify.setText(R.string.correct);
-            paintingQ5Verify.setTextColor(getResources().getColor(R.color.correct));
+            q5check = getResources().getString(R.string.correct);
+            displayQ5Check();
         }
         else {
             q5score = 0;
-            paintingQ5Verify.setText(R.string.wrong);
-            paintingQ5Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q5check = getResources().getString(R.string.wrong);
+            displayQ5Check();
         }
 
         if (paintingQ6A1.isChecked() && paintingQ6A2.isChecked() && !paintingQ6A3.isChecked()) {
             q6score = 1;
-            paintingQ6Verify.setText(R.string.correct);
-            paintingQ6Verify.setTextColor(getResources().getColor(R.color.correct));
+            q6check = getResources().getString(R.string.correct);
+            displayQ6Check();
         }
         else {
             q6score = 0;
-            paintingQ6Verify.setText(R.string.wrong);
-            paintingQ6Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q6check = getResources().getString(R.string.wrong);
+            displayQ6Check();
         }
 
         if (paintingQ7A1.isChecked()) {
             q7score = 1;
-            paintingQ7Verify.setText(R.string.correct);
-            paintingQ7Verify.setTextColor(getResources().getColor(R.color.correct));
+            q7check = getResources().getString(R.string.correct);
+            displayQ7Check();
         }
         else {
             q7score = 0;
-            paintingQ7Verify.setText(R.string.wrong);
-            paintingQ7Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q7check = getResources().getString(R.string.wrong);
+            displayQ7Check();
         }
 
         if (paintingQ8A1.isChecked()) {
             q8score = 1;
-            paintingQ8Verify.setText(R.string.correct);
-            paintingQ8Verify.setTextColor(getResources().getColor(R.color.correct));
+            q8check = getResources().getString(R.string.correct);
+            displayQ8Check();
         }
         else {
             q8score = 0;
-            paintingQ8Verify.setText(R.string.wrong);
-            paintingQ8Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q8check = getResources().getString(R.string.wrong);
+            displayQ8Check();
         }
 
         if (paintingQ9A3.isChecked()) {
             q9score = 1;
-            paintingQ9Verify.setText(R.string.correct);
-            paintingQ9Verify.setTextColor(getResources().getColor(R.color.correct));
+            q9check = getResources().getString(R.string.correct);
+            displayQ9Check();
         }
         else {
             q9score = 0;
-            paintingQ9Verify.setText(R.string.wrong);
-            paintingQ9Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q9check = getResources().getString(R.string.wrong);
+            displayQ9Check();
         }
 
         String paintingQ10A1Text = paintingQ10A1.getText().toString();
 
         if (paintingQ10A1Text.equals("1")) {
             q10score = 1;
-            paintingQ10Verify.setText(R.string.correct);
-            paintingQ10Verify.setTextColor(getResources().getColor(R.color.correct));
+            q10check = getResources().getString(R.string.correct);
+            displayQ10Check();
         }
         else {
             q10score = 0;
-            paintingQ10Verify.setText(R.string.wrong);
-            paintingQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
+            q10check = getResources().getString(R.string.wrong);
+            displayQ10Check();
         }
 
         int paintingScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
@@ -252,5 +314,146 @@ public class PaintingActivity extends MainActivity {
         Intent intent = new Intent(this, ScoreActivity.class);
         intent.putExtra("SCORE", score);
         startActivity(intent);
+    }
+
+    public void displayQ1Check() {
+        if (q1check.equals(getResources().getString(R.string.correct))){
+            paintingQ1Verify.setText(q1check);
+            paintingQ1Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q1check.equals(getResources().getString(R.string.wrong))) {
+            String q1wrong = q1check;
+            q1wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q1wrong += " " + getResources().getString(R.string.paintingQ1A1);
+            paintingQ1Verify.setText(q1wrong);
+            paintingQ1Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ2Check() {
+        if (q2check.equals(getResources().getString(R.string.correct))){
+            paintingQ2Verify.setText(q2check);
+            paintingQ2Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q2check.equals(getResources().getString(R.string.wrong))) {
+            String q2wrong = q2check;
+            q2wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q2wrong += " " + getResources().getString(R.string.paintingQ2A1);
+            paintingQ2Verify.setText(q2wrong);
+            paintingQ2Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ3Check() {
+        if (q3check.equals(getResources().getString(R.string.correct))){
+            paintingQ3Verify.setText(q3check);
+            paintingQ3Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q3check.equals(getResources().getString(R.string.wrong))) {
+            String q3wrong = q3check;
+            q3wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q3wrong += " " + getResources().getString(R.string.paintingQ3A3);
+            paintingQ3Verify.setText(q3wrong);
+            paintingQ3Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ4Check() {
+        if (q4check.equals(getResources().getString(R.string.correct))){
+            paintingQ4Verify.setText(q4check);
+            paintingQ4Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q4check.equals(getResources().getString(R.string.wrong))) {
+            String q4wrong = q4check;
+            q4wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q4wrong += " " + getResources().getString(R.string.paintingQ4A3);
+            paintingQ4Verify.setText(q4wrong);
+            paintingQ4Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ5Check() {
+        if (q5check.equals(getResources().getString(R.string.correct))){
+            paintingQ5Verify.setText(q5check);
+            paintingQ5Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q5check.equals(getResources().getString(R.string.wrong))) {
+            String q5wrong = q5check;
+            q5wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q5wrong += " " + getResources().getString(R.string.paintingQ5A3);
+            paintingQ5Verify.setText(q5wrong);
+            paintingQ5Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ6Check() {
+        if (q6check.equals(getResources().getString(R.string.correct))){
+            paintingQ6Verify.setText(q5check);
+            paintingQ6Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q6check.equals(getResources().getString(R.string.wrong))) {
+            String q6wrong = q6check;
+            q6wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q6wrong += " " + getResources().getString(R.string.paintingQ6A1);
+            q6wrong += " " + getResources().getString(R.string.paintingQ6A2);
+            paintingQ6Verify.setText(q6wrong);
+            paintingQ6Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ7Check() {
+        if (q7check.equals(getResources().getString(R.string.correct))){
+            paintingQ7Verify.setText(q7check);
+            paintingQ7Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q7check.equals(getResources().getString(R.string.wrong))) {
+            String q7wrong = q7check;
+            q7wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q7wrong += " " + getResources().getString(R.string.paintingQ7A1);
+            paintingQ7Verify.setText(q7wrong);
+            paintingQ7Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ8Check() {
+        if (q8check.equals(getResources().getString(R.string.correct))){
+            paintingQ8Verify.setText(q8check);
+            paintingQ8Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q8check.equals(getResources().getString(R.string.wrong))) {
+            String q8wrong = q8check;
+            q8wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q8wrong += " " + getResources().getString(R.string.paintingQ8A1);
+            paintingQ8Verify.setText(q8wrong);
+            paintingQ8Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ9Check() {
+        if (q9check.equals(getResources().getString(R.string.correct))){
+            paintingQ9Verify.setText(q9check);
+            paintingQ9Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q9check.equals(getResources().getString(R.string.wrong))) {
+            String q9wrong = q9check;
+            q9wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q9wrong += " " + getResources().getString(R.string.paintingQ9A3);
+            paintingQ9Verify.setText(q9wrong);
+            paintingQ9Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
+    }
+
+    public void displayQ10Check() {
+        if (q10check.equals(getResources().getString(R.string.correct))){
+            paintingQ10Verify.setText(q10check);
+            paintingQ10Verify.setTextColor(getResources().getColor(R.color.correct));
+        }
+        else if (q10check.equals(getResources().getString(R.string.wrong))) {
+            String q10wrong = q10check;
+            q10wrong += "\n" + getResources().getString(R.string.correct_answer);
+            q10wrong += " " + getResources().getString(R.string.paintingQ10A);
+            paintingQ10Verify.setText(q10wrong);
+            paintingQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
+        }
     }
 }

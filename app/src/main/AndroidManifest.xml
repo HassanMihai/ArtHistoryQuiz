@@ -45,13 +45,9 @@
                 android:value="com.example.android.arthistoryquiz.MainActivity" />
         </activity>
         <activity
-            android:parentActivityName="com.example.android.arthistoryquiz.PaintingActivity"
             android:label="Art History Your Score"
             android:name=".ScoreActivity"
             android:launchMode="singleTop" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.arthistoryquiz.PaintingActivity" />
         </activity>
     </application>
 

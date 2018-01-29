@@ -15,6 +15,7 @@
     <string name="check_answers">Check your answers!</string>
     <string name="congratulation">Congratulation!</string>
     <string name="question_image">Question image</string>
+    <string name="correct_answer">The correct answer is:</string>
 
     <string name="paintingQ1">1. The celling of The Sistine Chapel (located in Vatican) was painted between 1508 and 1512 by:</string>
     <string name="paintingQ1A1">Michelangelo</string>
@@ -63,6 +64,7 @@
 
     <string name="paintingQ10">10. How many paintings Vincent van Gogh sold during his lifetime?</string>
     <string name="paintingQ10A1">Write a number</string>
+    <string name="paintingQ10A">1</string>
 
     <string name="sculptureQ1">1. The Statue of Zeus at Olympia is One of the Seven Wonders of the Ancient World. The original sculpture it is preserved and can be seen today at:</string>
     <string name="sculptureQ1A1">National Gallery – London</string>
@@ -127,6 +129,7 @@
 
     <string name="architectureQ4">4. In which country was the Bauhaus School founded (the school was operational between 1919 1933)?</string>
     <string name="architectureQ4A1">Write the country name here</string>
+    <string name="architectureQ4A">Germany</string>
 
     <string name="architectureQ5">5. What is the name of the architect who designed the Sagrada Familia basilica located in Barcelona?</string>
     <string name="architectureQ5A1">Gaudi</string>

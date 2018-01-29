@@ -15,6 +15,7 @@
     <string name="check_answers">Verifica raspunsurile tale!</string>
     <string name="congratulation">Felicitari!</string>
     <string name="question_image">Imagine intrebare</string>
+    <string name="correct_answer">Raspunsul corect este:</string>
 
     <string name="paintingQ1">1. Tavanul Capelei Sixtine aflate la Vatican, a fost pictat in perioada 1508 and 1512 de:</string>
     <string name="paintingQ1A1">Michelangelo</string>
@@ -63,6 +64,7 @@
 
     <string name="paintingQ10">10. Cate picturi a vandut Vincent van Gogh in intreaga sa viata?</string>
     <string name="paintingQ10A1">Scrie o cifra</string>
+    <string name="paintingQ10A">1</string>
 
     <string name="sculptureQ1">1. Statuia lui Zeus din Olimpia este una din cele 7 minuni ale lumii antice. Originalul se pastreaza si poate fi vazut astazi la:</string>
     <string name="sculptureQ1A1">National Gallery din Londra</string>
@@ -125,6 +127,7 @@
 
     <string name="architectureQ4">4. In ce tara a fost fondata scoala Bauhaus (functionala intre 1919 1933)?</string>
     <string name="architectureQ4A1">Scrie numele tarii aici</string>
+    <string name="architectureQ4A">Germania</string>
 
     <string name="architectureQ5">5. Cum se numeste arhitectul care a proiectat bazilica Sagrada Familia din Barcelona?</string>
     <string name="architectureQ5A1">Gaudi</string>
