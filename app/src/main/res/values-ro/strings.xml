@@ -16,6 +16,7 @@
     <string name="congratulation">Felicitari!</string>
     <string name="question_image">Imagine intrebare</string>
     <string name="correct_answer">Raspunsul corect este:</string>
+    <string name="of_10">%d/10</string>
 
     <string name="paintingQ1">1. Tavanul Capelei Sixtine aflate la Vatican, a fost pictat in perioada 1508 and 1512 de:</string>
     <string name="paintingQ1A1">Michelangelo</string>

@@ -16,6 +16,7 @@
     <string name="congratulation">Congratulation!</string>
     <string name="question_image">Question image</string>
     <string name="correct_answer">The correct answer is:</string>
+    <string name="of_10">%d/10</string>
 
     <string name="paintingQ1">1. The celling of The Sistine Chapel (located in Vatican) was painted between 1508 and 1512 by:</string>
     <string name="paintingQ1A1">Michelangelo</string>

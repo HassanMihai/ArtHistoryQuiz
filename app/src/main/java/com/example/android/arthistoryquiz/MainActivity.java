@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
         int aScore = myPreferences.getInt("ARCHITECTURE", 0);
 
-        String paintingScore = pScore + "/10";
-        String sculptureScore = sScore + "/10";
-        String architectureScore = aScore + "/10";
+        String paintingScore = getString(R.string.of_10, pScore);
+        String sculptureScore = getString(R.string.of_10, sScore);
+        String architectureScore = getString(R.string.of_10, aScore);
 
         paintingScoreTV.setText(paintingScore);
 
