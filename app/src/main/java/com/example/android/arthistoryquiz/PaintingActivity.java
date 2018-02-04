@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class PaintingActivity extends MainActivity {
@@ -174,113 +175,113 @@ public class PaintingActivity extends MainActivity {
 
         if (paintingQ1A1.isChecked()) {
             q1score = 1;
-            q1check = getResources().getString(R.string.correct);
+            q1check = getString(R.string.correct);
             displayQ1Check();
         }
         else {
             q1score = 0;
-            q1check = getResources().getString(R.string.wrong);
+            q1check = getString(R.string.wrong);
             displayQ1Check();
         }
 
         if (paintingQ2A1.isChecked()) {
             q2score = 1;
-            q2check = getResources().getString(R.string.correct);
+            q2check = getString(R.string.correct);
             displayQ2Check();
         }
         else {
             q2score = 0;
-            q2check = getResources().getString(R.string.wrong);
+            q2check = getString(R.string.wrong);
             displayQ2Check();
         }
 
         if (paintingQ3A3.isChecked()) {
             q3score = 1;
-            q3check = getResources().getString(R.string.correct);
+            q3check = getString(R.string.correct);
             displayQ3Check();
         }
         else {
             q3score = 0;
-            q3check = getResources().getString(R.string.wrong);
+            q3check = getString(R.string.wrong);
             displayQ3Check();
         }
 
         if (paintingQ4A3.isChecked()) {
             q4score = 1;
-            q4check = getResources().getString(R.string.correct);
+            q4check = getString(R.string.correct);
             displayQ4Check();
         }
         else {
             q4score = 0;
-            q4check = getResources().getString(R.string.wrong);
+            q4check = getString(R.string.wrong);
             displayQ4Check();
         }
 
         if (paintingQ5A3.isChecked()) {
             q5score = 1;
-            q5check = getResources().getString(R.string.correct);
+            q5check = getString(R.string.correct);
             displayQ5Check();
         }
         else {
             q5score = 0;
-            q5check = getResources().getString(R.string.wrong);
+            q5check = getString(R.string.wrong);
             displayQ5Check();
         }
 
         if (paintingQ6A1.isChecked() && paintingQ6A2.isChecked() && !paintingQ6A3.isChecked()) {
             q6score = 1;
-            q6check = getResources().getString(R.string.correct);
+            q6check = getString(R.string.correct);
             displayQ6Check();
         }
         else {
             q6score = 0;
-            q6check = getResources().getString(R.string.wrong);
+            q6check = getString(R.string.wrong);
             displayQ6Check();
         }
 
         if (paintingQ7A1.isChecked()) {
             q7score = 1;
-            q7check = getResources().getString(R.string.correct);
+            q7check = getString(R.string.correct);
             displayQ7Check();
         }
         else {
             q7score = 0;
-            q7check = getResources().getString(R.string.wrong);
+            q7check = getString(R.string.wrong);
             displayQ7Check();
         }
 
         if (paintingQ8A1.isChecked()) {
             q8score = 1;
-            q8check = getResources().getString(R.string.correct);
+            q8check = getString(R.string.correct);
             displayQ8Check();
         }
         else {
             q8score = 0;
-            q8check = getResources().getString(R.string.wrong);
+            q8check = getString(R.string.wrong);
             displayQ8Check();
         }
 
         if (paintingQ9A3.isChecked()) {
             q9score = 1;
-            q9check = getResources().getString(R.string.correct);
+            q9check = getString(R.string.correct);
             displayQ9Check();
         }
         else {
             q9score = 0;
-            q9check = getResources().getString(R.string.wrong);
+            q9check = getString(R.string.wrong);
             displayQ9Check();
         }
 
         String paintingQ10A1Text = paintingQ10A1.getText().toString();
 
-        if (paintingQ10A1Text.equals("1")) {
+        if (paintingQ10A1Text.equals(getString(R.string.paintingQ10A))) {
             q10score = 1;
-            q10check = getResources().getString(R.string.correct);
+            q10check = getString(R.string.correct);
             displayQ10Check();
         }
         else {
             q10score = 0;
-            q10check = getResources().getString(R.string.wrong);
+            q10check = getString(R.string.wrong);
             displayQ10Check();
         }
 
@@ -319,6 +320,11 @@ public class PaintingActivity extends MainActivity {
      * This method show the score in ScoreActivity.
      */
     public void viewScore(int score) {
+        String yourScore = getString(R.string.you_answered, score);
+        yourScore += getString(R.string.of_questions);
+
+        Toast.makeText(this, yourScore, Toast.LENGTH_SHORT).show();
+
         Intent intent = new Intent(this, ScoreActivity.class);
         intent.putExtra("SCORE", score);
         startActivity(intent);
@@ -328,14 +334,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 1 is correct or wrong.
      */
     public void displayQ1Check() {
-        if (q1check.equals(getResources().getString(R.string.correct))){
+        if (q1check.equals(getString(R.string.correct))){
             paintingQ1Verify.setText(q1check);
             paintingQ1Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q1check.equals(getResources().getString(R.string.wrong))) {
+        else if (q1check.equals(getString(R.string.wrong))) {
             String q1wrong = q1check;
-            q1wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q1wrong += " " + getResources().getString(R.string.paintingQ1A1);
+            q1wrong += "\n" + getString(R.string.correct_answer);
+            q1wrong += " " + getString(R.string.paintingQ1A1);
             paintingQ1Verify.setText(q1wrong);
             paintingQ1Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -345,14 +351,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 2 is correct or wrong.
      */
     public void displayQ2Check() {
-        if (q2check.equals(getResources().getString(R.string.correct))){
+        if (q2check.equals(getString(R.string.correct))){
             paintingQ2Verify.setText(q2check);
             paintingQ2Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q2check.equals(getResources().getString(R.string.wrong))) {
+        else if (q2check.equals(getString(R.string.wrong))) {
             String q2wrong = q2check;
-            q2wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q2wrong += " " + getResources().getString(R.string.paintingQ2A1);
+            q2wrong += "\n" + getString(R.string.correct_answer);
+            q2wrong += " " + getString(R.string.paintingQ2A1);
             paintingQ2Verify.setText(q2wrong);
             paintingQ2Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -362,14 +368,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 3 is correct or wrong.
      */
     public void displayQ3Check() {
-        if (q3check.equals(getResources().getString(R.string.correct))){
+        if (q3check.equals(getString(R.string.correct))){
             paintingQ3Verify.setText(q3check);
             paintingQ3Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q3check.equals(getResources().getString(R.string.wrong))) {
+        else if (q3check.equals(getString(R.string.wrong))) {
             String q3wrong = q3check;
-            q3wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q3wrong += " " + getResources().getString(R.string.paintingQ3A3);
+            q3wrong += "\n" + getString(R.string.correct_answer);
+            q3wrong += " " + getString(R.string.paintingQ3A3);
             paintingQ3Verify.setText(q3wrong);
             paintingQ3Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -379,14 +385,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 4 is correct or wrong.
      */
     public void displayQ4Check() {
-        if (q4check.equals(getResources().getString(R.string.correct))){
+        if (q4check.equals(getString(R.string.correct))){
             paintingQ4Verify.setText(q4check);
             paintingQ4Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q4check.equals(getResources().getString(R.string.wrong))) {
+        else if (q4check.equals(getString(R.string.wrong))) {
             String q4wrong = q4check;
-            q4wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q4wrong += " " + getResources().getString(R.string.paintingQ4A3);
+            q4wrong += "\n" + getString(R.string.correct_answer);
+            q4wrong += " " + getString(R.string.paintingQ4A3);
             paintingQ4Verify.setText(q4wrong);
             paintingQ4Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -396,14 +402,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 5 is correct or wrong.
      */
     public void displayQ5Check() {
-        if (q5check.equals(getResources().getString(R.string.correct))){
+        if (q5check.equals(getString(R.string.correct))){
             paintingQ5Verify.setText(q5check);
             paintingQ5Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q5check.equals(getResources().getString(R.string.wrong))) {
+        else if (q5check.equals(getString(R.string.wrong))) {
             String q5wrong = q5check;
-            q5wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q5wrong += " " + getResources().getString(R.string.paintingQ5A3);
+            q5wrong += "\n" + getString(R.string.correct_answer);
+            q5wrong += " " + getString(R.string.paintingQ5A3);
             paintingQ5Verify.setText(q5wrong);
             paintingQ5Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -413,15 +419,15 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 6 is correct or wrong.
      */
     public void displayQ6Check() {
-        if (q6check.equals(getResources().getString(R.string.correct))){
+        if (q6check.equals(getString(R.string.correct))){
             paintingQ6Verify.setText(q5check);
             paintingQ6Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q6check.equals(getResources().getString(R.string.wrong))) {
+        else if (q6check.equals(getString(R.string.wrong))) {
             String q6wrong = q6check;
-            q6wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q6wrong += " " + getResources().getString(R.string.paintingQ6A1);
-            q6wrong += " " + getResources().getString(R.string.paintingQ6A2);
+            q6wrong += "\n" + getString(R.string.correct_answer);
+            q6wrong += " " + getString(R.string.paintingQ6A1);
+            q6wrong += " " + getString(R.string.paintingQ6A2);
             paintingQ6Verify.setText(q6wrong);
             paintingQ6Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -431,14 +437,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 7 is correct or wrong.
      */
     public void displayQ7Check() {
-        if (q7check.equals(getResources().getString(R.string.correct))){
+        if (q7check.equals(getString(R.string.correct))){
             paintingQ7Verify.setText(q7check);
             paintingQ7Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q7check.equals(getResources().getString(R.string.wrong))) {
+        else if (q7check.equals(getString(R.string.wrong))) {
             String q7wrong = q7check;
-            q7wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q7wrong += " " + getResources().getString(R.string.paintingQ7A1);
+            q7wrong += "\n" + getString(R.string.correct_answer);
+            q7wrong += " " + getString(R.string.paintingQ7A1);
             paintingQ7Verify.setText(q7wrong);
             paintingQ7Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -448,14 +454,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 8 is correct or wrong.
      */
     public void displayQ8Check() {
-        if (q8check.equals(getResources().getString(R.string.correct))){
+        if (q8check.equals(getString(R.string.correct))){
             paintingQ8Verify.setText(q8check);
             paintingQ8Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q8check.equals(getResources().getString(R.string.wrong))) {
+        else if (q8check.equals(getString(R.string.wrong))) {
             String q8wrong = q8check;
-            q8wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q8wrong += " " + getResources().getString(R.string.paintingQ8A1);
+            q8wrong += "\n" + getString(R.string.correct_answer);
+            q8wrong += " " + getString(R.string.paintingQ8A1);
             paintingQ8Verify.setText(q8wrong);
             paintingQ8Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -465,14 +471,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 9 is correct or wrong.
      */
     public void displayQ9Check() {
-        if (q9check.equals(getResources().getString(R.string.correct))){
+        if (q9check.equals(getString(R.string.correct))){
             paintingQ9Verify.setText(q9check);
             paintingQ9Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q9check.equals(getResources().getString(R.string.wrong))) {
+        else if (q9check.equals(getString(R.string.wrong))) {
             String q9wrong = q9check;
-            q9wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q9wrong += " " + getResources().getString(R.string.paintingQ9A3);
+            q9wrong += "\n" + getString(R.string.correct_answer);
+            q9wrong += " " + getString(R.string.paintingQ9A3);
             paintingQ9Verify.setText(q9wrong);
             paintingQ9Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -482,14 +488,14 @@ public class PaintingActivity extends MainActivity {
      * This method sets and display text if answer for question 10 is correct or wrong.
      */
     public void displayQ10Check() {
-        if (q10check.equals(getResources().getString(R.string.correct))){
+        if (q10check.equals(getString(R.string.correct))){
             paintingQ10Verify.setText(q10check);
             paintingQ10Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q10check.equals(getResources().getString(R.string.wrong))) {
+        else if (q10check.equals(getString(R.string.wrong))) {
             String q10wrong = q10check;
-            q10wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q10wrong += " " +  getResources().getString(R.string.paintingQ10A);
+            q10wrong += "\n" + getString(R.string.correct_answer);
+            q10wrong += " " +  getString(R.string.paintingQ10A);
             paintingQ10Verify.setText(q10wrong);
             paintingQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
         }

@@ -7,8 +7,8 @@
     <string name="submitAnswers">Submit Answers</string>
     <string name="correct">Correct</string>
     <string name="wrong">Wrong</string>
-    <string name="you_answered">You answered correctly to</string>
-    <string name="of_questions">of 10 questions!</string>
+    <string name="you_answered">You answered correctly to %d</string>
+    <string name="of_questions">&#160;of 10 questions!</string>
     <string name="amazing">Amazing!</string>
     <string name="good">Good!</string>
     <string name="bad">Not good&#8230;</string>
@@ -80,6 +80,9 @@
         made by one of the most influential artists who is considered to be the progenitor of modern sculpture.
         The name of the artist is:</string>
     <string name="sculptureQ3A1">Write the name of artist here</string>
+    <string name="sculptureQ3Aaugusterodin">Auguste Rodin</string>
+    <string name="sculptureQ3Arodin">Rodin</string>
+    <string name="sculptureQ3Arodinauguste">Rodin Auguste</string>
 
     <string name="sculptureQ4">4. The famous sculptor Constantin Brancusi was born in:</string>
     <string name="sculptureQ4A1">Romania</string>
@@ -98,6 +101,9 @@
 
     <string name="sculptureQ7">7. Perseus with the Head of Medusa is one of the sculptures that can be admired in the Loggia dei Lanzi-Florence. The Author of this statue is:</string>
     <string name="sculptureQ7A1">Write the name here</string>
+    <string name="sculptureQ7Abenvenutocellini">Benvenuto Cellini</string>
+    <string name="sculptureQ7Acellini">Cellini</string>
+    <string name="sculptureQ7Acellinibenvenuto">Cellini Benvenuto</string>
 
     <string name="sculptureQ8">8. The sculpture shown in the image is made by Louise Bourgeois - one of the most important contemporary artists,  best known for her large-scale sculpture and installation art, The title of the work presented here is:</string>
     <string name="sculptureQ8A1">Araignee</string>
@@ -121,6 +127,9 @@
 
     <string name="architectureQ2">2. The Florence Cathedral of Santa Maria del Fiore is has the largest brick dome ever constructed. Who is the one that engineered the dome of this cathedral?</string>
     <string name="architectureQ2A1">Write the name here</string>
+    <string name="architectureQ2Afillipobrunelleschi">Filippo Brunelleschi</string>
+    <string name="architectureQ2Abrunelleschi">Brunelleschi</string>
+    <string name="architectureQ2Abrunelleschifillipo">Brunelleschi Filippo</string>
 
     <string name="architectureQ3">3. The Notre-Dame Cathedral located in Paris is a representative building for the:</string>
     <string name="architectureQ3A1">Gothic architecture</string>

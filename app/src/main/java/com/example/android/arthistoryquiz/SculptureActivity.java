@@ -11,6 +11,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class SculptureActivity extends MainActivity {
@@ -169,115 +170,115 @@ public class SculptureActivity extends MainActivity {
     public void submitAnswers(View view) {
         if (sculptureQ1A3.isChecked()) {
             q1score = 1;
-            q1check = getResources().getString(R.string.correct);
+            q1check = getString(R.string.correct);
             displayQ1Check();
         }
         else {
             q1score = 0;
-            q1check = getResources().getString(R.string.wrong);
+            q1check = getString(R.string.wrong);
             displayQ1Check();
         }
 
         if (sculptureQ2A1.isChecked()) {
             q2score = 1;
-            q2check = getResources().getString(R.string.correct);
+            q2check = getString(R.string.correct);
             displayQ2Check();
         }
         else {
             q2score = 0;
-            q2check = getResources().getString(R.string.wrong);
+            q2check = getString(R.string.wrong);
             displayQ2Check();
         }
 
         String sculptureQ3A1Text = sculptureQ3A1.getText().toString().toLowerCase();
 
-        if (sculptureQ3A1Text.equals("rodin") || sculptureQ3A1Text.equals("auguste rodin") || sculptureQ3A1Text.equals("rodin auguste")) {
+        if (sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Aaugusterodin).toLowerCase()) || sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Arodinauguste).toLowerCase()) || sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Arodin).toLowerCase())) {
             q3score = 1;
-            q3check = getResources().getString(R.string.correct);
+            q3check = getString(R.string.correct);
             displayQ3Check();
         }
         else {
             q3score = 0;
-            q3check = getResources().getString(R.string.wrong);
+            q3check = getString(R.string.wrong);
             displayQ3Check();
         }
 
         if (sculptureQ4A1.isChecked()) {
             q4score = 1;
-            q4check = getResources().getString(R.string.correct);
+            q4check = getString(R.string.correct);
             displayQ4Check();
         }
         else {
             q4score = 0;
-            q4check = getResources().getString(R.string.wrong);
+            q4check = getString(R.string.wrong);
             displayQ4Check();
         }
 
         if (sculptureQ5A3.isChecked()) {
             q5score = 1;
-            q5check = getResources().getString(R.string.correct);
+            q5check = getString(R.string.correct);
             displayQ5Check();
         }
         else {
             q5score = 0;
-            q5check = getResources().getString(R.string.wrong);
+            q5check = getString(R.string.wrong);
             displayQ5Check();
         }
 
         if (sculptureQ6A2.isChecked()) {
             q6score = 1;
-            q6check = getResources().getString(R.string.correct);
+            q6check = getString(R.string.correct);
             displayQ6Check();
         }
         else {
             q6score = 0;
-            q6check = getResources().getString(R.string.wrong);
+            q6check = getString(R.string.wrong);
             displayQ6Check();
         }
 
         String sculptureQ7A1Text = sculptureQ7A1.getText().toString().toLowerCase();
 
-        if (sculptureQ7A1Text.equals("benvenuto cellini") || sculptureQ7A1Text.equals("cellini") || sculptureQ7A1Text.equals("cellini benvenuto")) {
+        if (sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Abenvenutocellini).toLowerCase()) || sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Acellini).toLowerCase()) || sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Acellinibenvenuto).toLowerCase())) {
             q7score = 1;
-            q7check = getResources().getString(R.string.correct);
+            q7check = getString(R.string.correct);
             displayQ7Check();
         }
         else {
             q7score = 0;
-            q7check = getResources().getString(R.string.wrong);
+            q7check = getString(R.string.wrong);
             displayQ7Check();
         }
 
         if (sculptureQ8A3.isChecked()) {
             q8score = 1;
-            q8check = getResources().getString(R.string.correct);
+            q8check = getString(R.string.correct);
             displayQ8Check();
         }
         else {
             q8score = 0;
-            q8check = getResources().getString(R.string.wrong);
+            q8check = getString(R.string.wrong);
             displayQ8Check();
         }
 
         if (sculptureQ9A1.isChecked()) {
             q9score = 1;
-            q9check = getResources().getString(R.string.correct);
+            q9check = getString(R.string.correct);
             displayQ9Check();
         }
         else {
             q9score = 0;
-            q9check = getResources().getString(R.string.wrong);
+            q9check = getString(R.string.wrong);
             displayQ9Check();
         }
 
         if (sculptureQ10A3.isChecked()) {
             q10score = 1;
-            q10check = getResources().getString(R.string.correct);
+            q10check = getString(R.string.correct);
             displayQ10Check();
         }
         else {
             q10score = 0;
-            q10check = getResources().getString(R.string.wrong);
+            q10check = getString(R.string.wrong);
             displayQ10Check();
         }
 
@@ -315,6 +316,11 @@ public class SculptureActivity extends MainActivity {
      * This method show the score in ScoreActivity.
      */
     public void viewScore(int score) {
+        String yourScore = getString(R.string.you_answered, score);
+        yourScore += getString(R.string.of_questions);
+
+        Toast.makeText(this, yourScore, Toast.LENGTH_SHORT).show();
+
         Intent intent = new Intent(this, ScoreActivity.class);
         intent.putExtra("SCORE", score);
         startActivity(intent);
@@ -324,14 +330,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 1 is correct or wrong.
      */
     public void displayQ1Check() {
-        if (q1check.equals(getResources().getString(R.string.correct))){
+        if (q1check.equals(getString(R.string.correct))){
             sculptureQ1Verify.setText(q1check);
             sculptureQ1Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q1check.equals(getResources().getString(R.string.wrong))) {
+        else if (q1check.equals(getString(R.string.wrong))) {
             String q1wrong = q1check;
-            q1wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q1wrong += " " + getResources().getString(R.string.sculptureQ1A3);
+            q1wrong += "\n" + getString(R.string.correct_answer);
+            q1wrong += " " + getString(R.string.sculptureQ1A3);
             sculptureQ1Verify.setText(q1wrong);
             sculptureQ1Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -341,14 +347,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 2 is correct or wrong.
      */
     public void displayQ2Check() {
-        if (q2check.equals(getResources().getString(R.string.correct))){
+        if (q2check.equals(getString(R.string.correct))){
             sculptureQ2Verify.setText(q2check);
             sculptureQ2Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q2check.equals(getResources().getString(R.string.wrong))) {
+        else if (q2check.equals(getString(R.string.wrong))) {
             String q2wrong = q2check;
-            q2wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q2wrong += " " + getResources().getString(R.string.sculptureQ2A1);
+            q2wrong += "\n" + getString(R.string.correct_answer);
+            q2wrong += " " + getString(R.string.sculptureQ2A1);
             sculptureQ2Verify.setText(q2wrong);
             sculptureQ2Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -358,14 +364,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 3 is correct or wrong.
      */
     public void displayQ3Check() {
-        if (q3check.equals(getResources().getString(R.string.correct))){
+        if (q3check.equals(getString(R.string.correct))){
             sculptureQ3Verify.setText(q3check);
             sculptureQ3Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q3check.equals(getResources().getString(R.string.wrong))) {
+        else if (q3check.equals(getString(R.string.wrong))) {
             String q3wrong = q3check;
-            q3wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q3wrong += " " + "Auguste Rodin";
+            q3wrong += "\n" + getString(R.string.correct_answer);
+            q3wrong += " " + getString(R.string.sculptureQ3Aaugusterodin);
             sculptureQ3Verify.setText(q3wrong);
             sculptureQ3Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -375,14 +381,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 4 is correct or wrong.
      */
     public void displayQ4Check() {
-        if (q4check.equals(getResources().getString(R.string.correct))){
+        if (q4check.equals(getString(R.string.correct))){
             sculptureQ4Verify.setText(q4check);
             sculptureQ4Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q4check.equals(getResources().getString(R.string.wrong))) {
+        else if (q4check.equals(getString(R.string.wrong))) {
             String q4wrong = q4check;
-            q4wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q4wrong += " " + getResources().getString(R.string.sculptureQ4A1);
+            q4wrong += "\n" + getString(R.string.correct_answer);
+            q4wrong += " " + getString(R.string.sculptureQ4A1);
             sculptureQ4Verify.setText(q4wrong);
             sculptureQ4Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -392,14 +398,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 5 is correct or wrong.
      */
     public void displayQ5Check() {
-        if (q5check.equals(getResources().getString(R.string.correct))){
+        if (q5check.equals(getString(R.string.correct))){
             sculptureQ5Verify.setText(q5check);
             sculptureQ5Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q5check.equals(getResources().getString(R.string.wrong))){
+        else if (q5check.equals(getString(R.string.wrong))){
             String q5wrong = q5check;
-            q5wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q5wrong += " " + getResources().getString(R.string.sculptureQ5A3);
+            q5wrong += "\n" + getString(R.string.correct_answer);
+            q5wrong += " " + getString(R.string.sculptureQ5A3);
             sculptureQ5Verify.setText(q5wrong);
             sculptureQ5Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -409,14 +415,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 6 is correct or wrong.
      */
     public void displayQ6Check() {
-        if (q6check.equals(getResources().getString(R.string.correct))){
+        if (q6check.equals(getString(R.string.correct))){
             sculptureQ6Verify.setText(q5check);
             sculptureQ6Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q6check.equals(getResources().getString(R.string.wrong))) {
+        else if (q6check.equals(getString(R.string.wrong))) {
             String q6wrong = q6check;
-            q6wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q6wrong += " " + getResources().getString(R.string.sculptureQ6A2);
+            q6wrong += "\n" + getString(R.string.correct_answer);
+            q6wrong += " " + getString(R.string.sculptureQ6A2);
             sculptureQ6Verify.setText(q6wrong);
             sculptureQ6Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -426,14 +432,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 7 is correct or wrong.
      */
     public void displayQ7Check() {
-        if (q7check.equals(getResources().getString(R.string.correct))){
+        if (q7check.equals(getString(R.string.correct))){
             sculptureQ7Verify.setText(q7check);
             sculptureQ7Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q7check.equals(getResources().getString(R.string.wrong))) {
+        else if (q7check.equals(getString(R.string.wrong))) {
             String q7wrong = q7check;
-            q7wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q7wrong += " " + "Benvenuto Cellini";
+            q7wrong += "\n" + getString(R.string.correct_answer);
+            q7wrong += " " + getString(R.string.sculptureQ7Abenvenutocellini);
             sculptureQ7Verify.setText(q7wrong);
             sculptureQ7Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -443,14 +449,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 8 is correct or wrong.
      */
     public void displayQ8Check() {
-        if (q8check.equals(getResources().getString(R.string.correct))){
+        if (q8check.equals(getString(R.string.correct))){
             sculptureQ8Verify.setText(q8check);
             sculptureQ8Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q8check.equals(getResources().getString(R.string.wrong))) {
+        else if (q8check.equals(getString(R.string.wrong))) {
             String q8wrong = q8check;
-            q8wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q8wrong += " " + getResources().getString(R.string.sculptureQ8A3);
+            q8wrong += "\n" + getString(R.string.correct_answer);
+            q8wrong += " " + getString(R.string.sculptureQ8A3);
             sculptureQ8Verify.setText(q8wrong);
             sculptureQ8Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -460,14 +466,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 9 is correct or wrong.
      */
     public void displayQ9Check() {
-        if (q9check.equals(getResources().getString(R.string.correct))){
+        if (q9check.equals(getString(R.string.correct))){
             sculptureQ9Verify.setText(q9check);
             sculptureQ9Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q9check.equals(getResources().getString(R.string.wrong))) {
+        else if (q9check.equals(getString(R.string.wrong))) {
             String q9wrong = q9check;
-            q9wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q9wrong += " " + getResources().getString(R.string.sculptureQ9A1);
+            q9wrong += "\n" + getString(R.string.correct_answer);
+            q9wrong += " " + getString(R.string.sculptureQ9A1);
             sculptureQ9Verify.setText(q9wrong);
             sculptureQ9Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -477,14 +483,14 @@ public class SculptureActivity extends MainActivity {
      * This method sets and display text if answer for question 1 is correct or wrong.
      */
     public void displayQ10Check() {
-        if (q10check.equals(getResources().getString(R.string.correct))){
+        if (q10check.equals(getString(R.string.correct))){
             sculptureQ10Verify.setText(q10check);
             sculptureQ10Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q10check.equals(getResources().getString(R.string.wrong))) {
+        else if (q10check.equals(getString(R.string.wrong))) {
             String q10wrong = q10check;
-            q10wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q10wrong += " " + getResources().getString(R.string.sculptureQ10A3);
+            q10wrong += "\n" + getString(R.string.correct_answer);
+            q10wrong += " " + getString(R.string.sculptureQ10A3);
             sculptureQ10Verify.setText(q10wrong);
             sculptureQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
         }

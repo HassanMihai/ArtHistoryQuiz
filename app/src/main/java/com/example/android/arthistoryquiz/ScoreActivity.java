@@ -34,31 +34,30 @@ public class ScoreActivity extends MainActivity{
 
         if(score == 10) {
             emoteIV.setImageResource(R.drawable.great);
-            congratTV.setText(getResources().getString(R.string.amazing));
+            congratTV.setText(getString(R.string.amazing));
             congratTV.setTextColor(getResources().getColor(R.color.correct));
-            checkAnswersTV.setText(getResources().getString(R.string.congratulation));
+            checkAnswersTV.setText(getString(R.string.congratulation));
             checkAnswersTV.setTextColor(getResources().getColor(R.color.correct));
         }
 
         if(score < 10 && score >= 6) {
             emoteIV.setImageResource(R.drawable.good);
-            congratTV.setText(getResources().getString(R.string.good));
+            congratTV.setText(getString(R.string.good));
             congratTV.setTextColor(getResources().getColor(R.color.correct));
-            checkAnswersTV.setText(getResources().getString(R.string.check_answers));
+            checkAnswersTV.setText(getString(R.string.check_answers));
             checkAnswersTV.setTextColor(getResources().getColor(R.color.wrong));
         }
 
         if(score == 0 || score < 6) {
             emoteIV.setImageResource(R.drawable.notgood);
-            congratTV.setText(getResources().getString(R.string.bad));
+            congratTV.setText(getString(R.string.bad));
             congratTV.setTextColor(getResources().getColor(R.color.wrong));
-            checkAnswersTV.setText(getResources().getString(R.string.check_answers));
+            checkAnswersTV.setText(getString(R.string.check_answers));
             checkAnswersTV.setTextColor(getResources().getColor(R.color.wrong));
         }
 
-        String yourScore = getResources().getString(R.string.you_answered);
-        yourScore += " " + String.valueOf(score);
-        yourScore += " " + getResources().getString(R.string.of_questions);
+        String yourScore = getString(R.string.you_answered, score);
+        yourScore += getString(R.string.of_questions);
 
         scoreTV.setText(yourScore);
     }

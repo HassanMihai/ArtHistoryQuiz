@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class ArchitectureActivity extends MainActivity {
@@ -174,115 +175,115 @@ public class ArchitectureActivity extends MainActivity {
     public void submitAnswers(View view) {
         if (architectureQ1A2.isChecked()) {
             q1score = 1;
-            q1check = getResources().getString(R.string.correct);
+            q1check = getString(R.string.correct);
             displayQ1Check();
         }
         else {
             q1score = 0;
-            q1check = getResources().getString(R.string.wrong);
+            q1check = getString(R.string.wrong);
             displayQ1Check();
         }
 
         String architectureQ2A1Text = architectureQ2A1.getText().toString().toLowerCase();
 
-        if (architectureQ2A1Text.equals("filippo brunelleschi") || architectureQ2A1Text.equals("brunelleschi") || architectureQ2A1Text.equals("brunelleschi filippo")) {
+        if (architectureQ2A1Text.equals(getString(R.string.architectureQ2Afillipobrunelleschi).toLowerCase()) || architectureQ2A1Text.equals(getString(R.string.architectureQ2Abrunelleschi).toLowerCase()) || architectureQ2A1Text.equals(getString(R.string.architectureQ2Abrunelleschifillipo).toLowerCase())) {
             q2score = 1;
-            q2check = getResources().getString(R.string.correct);
+            q2check = getString(R.string.correct);
             displayQ2Check();
         }
         else {
             q2score = 0;
-            q2check = getResources().getString(R.string.wrong);
+            q2check = getString(R.string.wrong);
             displayQ2Check();
         }
 
         if (architectureQ3A1.isChecked()) {
             q3score = 1;
-            q3check = getResources().getString(R.string.correct);
+            q3check = getString(R.string.correct);
             displayQ3Check();
         }
         else {
             q3score = 0;
-            q3check = getResources().getString(R.string.wrong);
+            q3check = getString(R.string.wrong);
             displayQ3Check();
         }
 
         String architectureQ4A1Text = architectureQ4A1.getText().toString().toLowerCase();
 
-        if (architectureQ4A1Text.equals("germany") || architectureQ4A1Text.equals("germania")) {
+        if (architectureQ4A1Text.equals(getString(R.string.architectureQ4A).toLowerCase())) {
             q4score = 1;
-            q4check = getResources().getString(R.string.correct);
+            q4check = getString(R.string.correct);
             displayQ4Check();
         }
         else {
             q4score = 0;
-            q4check = getResources().getString(R.string.wrong);
+            q4check = getString(R.string.wrong);
             displayQ4Check();
         }
 
         if (architectureQ5A1.isChecked()) {
             q5score = 1;
-            q5check = getResources().getString(R.string.correct);
+            q5check = getString(R.string.correct);
             displayQ5Check();
         }
         else {
             q5score = 0;
-            q5check = getResources().getString(R.string.wrong);
+            q5check = getString(R.string.wrong);
             displayQ5Check();
         }
 
         if (architectureQ6A1.isChecked() && architectureQ6A2.isChecked() && architectureQ6A3.isChecked()) {
             q6score = 1;
-            q6check = getResources().getString(R.string.correct);
+            q6check = getString(R.string.correct);
             displayQ6Check();
         }
         else {
             q6score = 0;
-            q6check = getResources().getString(R.string.wrong);
+            q6check = getString(R.string.wrong);
             displayQ6Check();
         }
 
         if (architectureQ7A1.isChecked()) {
             q7score = 1;
-            q7check = getResources().getString(R.string.correct);
+            q7check = getString(R.string.correct);
             displayQ7Check();
         }
         else {
             q7score = 0;
-            q7check = getResources().getString(R.string.wrong);
+            q7check = getString(R.string.wrong);
             displayQ7Check();
         }
 
         if (architectureQ8A2.isChecked()) {
             q8score = 1;
-            q8check = getResources().getString(R.string.correct);
+            q8check = getString(R.string.correct);
             displayQ8Check();
         }
         else {
             q8score = 0;
-            q8check = getResources().getString(R.string.wrong);
+            q8check = getString(R.string.wrong);
             displayQ8Check();
         }
 
         if (architectureQ9A1.isChecked()) {
             q9score = 1;
-            q9check = getResources().getString(R.string.correct);
+            q9check = getString(R.string.correct);
             displayQ9Check();
         }
         else {
             q9score = 0;
-            q9check = getResources().getString(R.string.wrong);
+            q9check = getString(R.string.wrong);
             displayQ9Check();
         }
 
         if (architectureQ10A2.isChecked()) {
             q10score = 1;
-            q10check = getResources().getString(R.string.correct);
+            q10check = getString(R.string.correct);
             displayQ10Check();
         }
         else {
             q10score = 0;
-            q10check = getResources().getString(R.string.wrong);
+            q10check = getString(R.string.wrong);
             displayQ10Check();
         }
 
@@ -320,6 +321,11 @@ public class ArchitectureActivity extends MainActivity {
      * This method show the score in ScoreActivity.
      */
     public void viewScore(int score) {
+        String yourScore = getString(R.string.you_answered, score);
+        yourScore += getString(R.string.of_questions);
+
+        Toast.makeText(this, yourScore, Toast.LENGTH_SHORT).show();
+
         Intent intent = new Intent(this, ScoreActivity.class);
         intent.putExtra("SCORE", score);
         startActivity(intent);
@@ -329,14 +335,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 1 is correct or wrong.
      */
     public void displayQ1Check() {
-        if (q1check.equals(getResources().getString(R.string.correct))){
+        if (q1check.equals(getString(R.string.correct))){
             architectureQ1Verify.setText(q1check);
             architectureQ1Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q1check.equals(getResources().getString(R.string.wrong))) {
+        else if (q1check.equals(getString(R.string.wrong))) {
             String q1wrong = q1check;
-            q1wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q1wrong += " " + getResources().getString(R.string.architectureQ1A2);
+            q1wrong += "\n" + getString(R.string.correct_answer);
+            q1wrong += " " + getString(R.string.architectureQ1A2);
             architectureQ1Verify.setText(q1wrong);
             architectureQ1Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -346,14 +352,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 2 is correct or wrong.
      */
     public void displayQ2Check() {
-        if (q2check.equals(getResources().getString(R.string.correct))){
+        if (q2check.equals(getString(R.string.correct))){
             architectureQ2Verify.setText(q2check);
             architectureQ2Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q2check.equals(getResources().getString(R.string.wrong))) {
+        else if (q2check.equals(getString(R.string.wrong))) {
             String q2wrong = q2check;
-            q2wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q2wrong += " " + "Filippo Brunelleschi";
+            q2wrong += "\n" + getString(R.string.correct_answer);
+            q2wrong += " " + getString(R.string.architectureQ2Afillipobrunelleschi);
             architectureQ2Verify.setText(q2wrong);
             architectureQ2Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -363,14 +369,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 3 is correct or wrong.
      */
     public void displayQ3Check() {
-        if (q3check.equals(getResources().getString(R.string.correct))){
+        if (q3check.equals(getString(R.string.correct))){
             architectureQ3Verify.setText(q3check);
             architectureQ3Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q3check.equals(getResources().getString(R.string.wrong))) {
+        else if (q3check.equals(getString(R.string.wrong))) {
             String q3wrong = q3check;
-            q3wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q3wrong += " " + getResources().getString(R.string.architectureQ3A1);
+            q3wrong += "\n" + getString(R.string.correct_answer);
+            q3wrong += " " + getString(R.string.architectureQ3A1);
             architectureQ3Verify.setText(q3wrong);
             architectureQ3Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -380,14 +386,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 4 is correct or wrong.
      */
     public void displayQ4Check() {
-        if (q4check.equals(getResources().getString(R.string.correct))){
+        if (q4check.equals(getString(R.string.correct))){
             architectureQ4Verify.setText(q4check);
             architectureQ4Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q4check.equals(getResources().getString(R.string.wrong))) {
+        else if (q4check.equals(getString(R.string.wrong))) {
             String q4wrong = q4check;
-            q4wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q4wrong += " " + getResources().getString(R.string.architectureQ4A);
+            q4wrong += "\n" + getString(R.string.correct_answer);
+            q4wrong += " " + getString(R.string.architectureQ4A);
             architectureQ4Verify.setText(q4wrong);
             architectureQ4Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -397,14 +403,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 5 is correct or wrong.
      */
     public void displayQ5Check() {
-        if (q5check.equals(getResources().getString(R.string.correct))){
+        if (q5check.equals(getString(R.string.correct))){
             architectureQ5Verify.setText(q5check);
             architectureQ5Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q5check.equals(getResources().getString(R.string.wrong))) {
+        else if (q5check.equals(getString(R.string.wrong))) {
             String q5wrong = q5check;
-            q5wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q5wrong += " " + getResources().getString(R.string.architectureQ5A1);
+            q5wrong += "\n" + getString(R.string.correct_answer);
+            q5wrong += " " + getString(R.string.architectureQ5A1);
             architectureQ5Verify.setText(q5wrong);
             architectureQ5Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -414,16 +420,16 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 6 is correct or wrong.
      */
     public void displayQ6Check() {
-        if (q6check.equals(getResources().getString(R.string.correct))){
+        if (q6check.equals(getString(R.string.correct))){
             architectureQ6Verify.setText(q5check);
             architectureQ6Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q6check.equals(getResources().getString(R.string.wrong))) {
+        else if (q6check.equals(getString(R.string.wrong))) {
             String q6wrong = q6check;
-            q6wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q6wrong += " " + getResources().getString(R.string.architectureQ6A1);
-            q6wrong += " " + getResources().getString(R.string.architectureQ6A2);
-            q6wrong += " " + getResources().getString(R.string.architectureQ6A3);
+            q6wrong += "\n" + getString(R.string.correct_answer);
+            q6wrong += " " + getString(R.string.architectureQ6A1);
+            q6wrong += " " + getString(R.string.architectureQ6A2);
+            q6wrong += " " + getString(R.string.architectureQ6A3);
             architectureQ6Verify.setText(q6wrong);
             architectureQ6Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -433,14 +439,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 7 is correct or wrong.
      */
     public void displayQ7Check() {
-        if (q7check.equals(getResources().getString(R.string.correct))){
+        if (q7check.equals(getString(R.string.correct))){
             architectureQ7Verify.setText(q7check);
             architectureQ7Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q7check.equals(getResources().getString(R.string.wrong))) {
+        else if (q7check.equals(getString(R.string.wrong))) {
             String q7wrong = q7check;
-            q7wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q7wrong += " " + getResources().getString(R.string.architectureQ7A1);
+            q7wrong += "\n" + getString(R.string.correct_answer);
+            q7wrong += " " + getString(R.string.architectureQ7A1);
             architectureQ7Verify.setText(q7wrong);
             architectureQ7Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -450,14 +456,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 8 is correct or wrong.
      */
     public void displayQ8Check() {
-        if (q8check.equals(getResources().getString(R.string.correct))){
+        if (q8check.equals(getString(R.string.correct))){
             architectureQ8Verify.setText(q8check);
             architectureQ8Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q8check.equals(getResources().getString(R.string.wrong))) {
+        else if (q8check.equals(getString(R.string.wrong))) {
             String q8wrong = q8check;
-            q8wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q8wrong += " " + getResources().getString(R.string.architectureQ8A2);
+            q8wrong += "\n" + getString(R.string.correct_answer);
+            q8wrong += " " + getString(R.string.architectureQ8A2);
             architectureQ8Verify.setText(q8wrong);
             architectureQ8Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -467,14 +473,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 9 is correct or wrong.
      */
     public void displayQ9Check() {
-        if (q9check.equals(getResources().getString(R.string.correct))){
+        if (q9check.equals(getString(R.string.correct))){
             architectureQ9Verify.setText(q9check);
             architectureQ9Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q9check.equals(getResources().getString(R.string.wrong))) {
+        else if (q9check.equals(getString(R.string.wrong))) {
             String q9wrong = q9check;
-            q9wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q9wrong += " " + getResources().getString(R.string.architectureQ9A1);
+            q9wrong += "\n" + getString(R.string.correct_answer);
+            q9wrong += " " + getString(R.string.architectureQ9A1);
             architectureQ9Verify.setText(q9wrong);
             architectureQ9Verify.setTextColor(getResources().getColor(R.color.wrong));
         }
@@ -484,14 +490,14 @@ public class ArchitectureActivity extends MainActivity {
      * This method sets and display text if answer for question 10 is correct or wrong.
      */
     public void displayQ10Check() {
-        if (q10check.equals(getResources().getString(R.string.correct))){
+        if (q10check.equals(getString(R.string.correct))){
             architectureQ10Verify.setText(q10check);
             architectureQ10Verify.setTextColor(getResources().getColor(R.color.correct));
         }
-        else if (q10check.equals(getResources().getString(R.string.wrong))) {
+        else if (q10check.equals(getString(R.string.wrong))) {
             String q10wrong = q10check;
-            q10wrong += "\n" + getResources().getString(R.string.correct_answer);
-            q10wrong += " " + getResources().getString(R.string.architectureQ10A2);
+            q10wrong += "\n" + getString(R.string.correct_answer);
+            q10wrong += " " + getString(R.string.architectureQ10A2);
             architectureQ10Verify.setText(q10wrong);
             architectureQ10Verify.setTextColor(getResources().getColor(R.color.wrong));
         }

@@ -7,8 +7,8 @@
     <string name="submitAnswers">Trimite Raspunsurile</string>
     <string name="correct">Corect</string>
     <string name="wrong">Gresit</string>
-    <string name="you_answered">Ai raspuns corect la</string>
-    <string name="of_questions">din 10 intrebari!</string>
+    <string name="you_answered">Ai raspuns corect la %d</string>
+    <string name="of_questions">&#160;din 10 intrebari!</string>
     <string name="amazing">Uimitor!</string>
     <string name="good">Bine!</string>
     <string name="bad">Nu este bine&#8230;</string>
@@ -78,6 +78,9 @@
 
     <string name="sculptureQ3">3. Sculptura din imaginea alaturata se numeste “Sarutul” si este realizata de unul dintre cei mai influenti artisti care a pus bazele sculpturii moderne.</string>
     <string name="sculptureQ3A1">Scrie numele artistului aici</string>
+    <string name="sculptureQ3Aaugusterodin">Auguste Rodin</string>
+    <string name="sculptureQ3Arodin">Rodin</string>
+    <string name="sculptureQ3Arodinauguste">Rodin Auguste</string>
 
     <string name="sculptureQ4">4. Faimosul sculptor Constantin Brancusi este originar din:</string>
     <string name="sculptureQ4A1">Romania</string>
@@ -96,6 +99,9 @@
 
     <string name="sculptureQ7">7. Perseu cu capul meduzei este una din sculpturile care pot fi admirate in Loggia dei Lanzi din Florenta. Autorul acestei sculpturi este:</string>
     <string name="sculptureQ7A1">Scrie numele aici</string>
+    <string name="sculptureQ7Abenvenutocellini">Benvenuto Cellini</string>
+    <string name="sculptureQ7Acellini">Cellini</string>
+    <string name="sculptureQ7Acellinibenvenuto">Cellini Benvenuto</string>
 
     <string name="sculptureQ8">8. Sculptura din imagine este realizata de Louise Bourgeois- una dintre cele mai importante artiste contemporane, cunoscuta pentru imensele ei sculpturi si instalatii . Titlul lucrarii prezentate aici este:</string>
     <string name="sculptureQ8A1">Araignee</string>
@@ -119,6 +125,9 @@
 
     <string name="architectureQ2">2. Catedrala Santa Maria del Fiore din Florenta are cea mai mare cupola contruit vreodata din caramizi.  Cine este cel care a proiectat cupola acestei catedrale?</string>
     <string name="architectureQ2A1">Scrie numele aici</string>
+    <string name="architectureQ2Afillipobrunelleschi">Filippo Brunelleschi</string>
+    <string name="architectureQ2Abrunelleschi">Brunelleschi</string>
+    <string name="architectureQ2Abrunelleschifillipo">Brunelleschi Filippo</string>
 
     <string name="architectureQ3">3. Catedrala Notre Dame din Paris este o cladire reprezentativa pentru arhitectura:</string>
     <string name="architectureQ3A1">Gotica</string>
