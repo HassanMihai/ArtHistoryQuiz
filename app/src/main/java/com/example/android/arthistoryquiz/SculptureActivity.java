@@ -189,7 +189,10 @@ public class SculptureActivity extends MainActivity {
 
         String sculptureQ3A1Text = sculptureQ3A1.getText().toString().toLowerCase();
 
-        if (sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Aaugusterodin).toLowerCase()) || sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Arodinauguste).toLowerCase()) || sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Arodin).toLowerCase())) {
+        if (sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Aaugusterodin).toLowerCase())
+                || sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Arodinauguste).toLowerCase())
+                || sculptureQ3A1Text.equals(getString(R.string.sculptureQ3Arodin).toLowerCase())
+                ){
             q3score = 1;
             q3check = getString(R.string.correct);
             displayQ3Check();
@@ -235,7 +238,10 @@ public class SculptureActivity extends MainActivity {
 
         String sculptureQ7A1Text = sculptureQ7A1.getText().toString().toLowerCase();
 
-        if (sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Abenvenutocellini).toLowerCase()) || sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Acellini).toLowerCase()) || sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Acellinibenvenuto).toLowerCase())) {
+        if (sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Abenvenutocellini).toLowerCase())
+                || sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Acellini).toLowerCase())
+                || sculptureQ7A1Text.equals(getString(R.string.sculptureQ7Acellinibenvenuto).toLowerCase())
+                ){
             q7score = 1;
             q7check = getString(R.string.correct);
             displayQ7Check();
@@ -279,7 +285,18 @@ public class SculptureActivity extends MainActivity {
             displayQ10Check();
         }
 
-        int sculptureScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
+        int sculptureScore = calculateScore(
+            q1score,
+            q2score,
+            q3score,
+            q4score,
+            q5score,
+            q6score,
+            q7score,
+            q8score,
+            q9score,
+            q10score
+        );
         saveScore(sculptureScore);
         viewScore(sculptureScore);
     }
@@ -287,8 +304,18 @@ public class SculptureActivity extends MainActivity {
     /**
      * This method calculate the score.
      */
-    public int calculateScore(int q1score, int q2score, int q3score, int q4score, int q5score,
-                              int q6score, int q7score, int q8score, int q9score, int q10score) {
+    public int calculateScore(
+        int q1score,
+        int q2score,
+        int q3score,
+        int q4score,
+        int q5score,
+        int q6score,
+        int q7score,
+        int q8score,
+        int q9score,
+        int q10score
+    ){
         int score;
         score = q1score + q2score + q3score + q4score + q5score + q6score + q7score + q8score + q9score + q10score;
         return score;

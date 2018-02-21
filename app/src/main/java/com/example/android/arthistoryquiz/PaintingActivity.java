@@ -284,7 +284,18 @@ public class PaintingActivity extends MainActivity {
             displayQ10Check();
         }
 
-        int paintingScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
+        int paintingScore = calculateScore(
+            q1score,
+            q2score,
+            q3score,
+            q4score,
+            q5score,
+            q6score,
+            q7score,
+            q8score,
+            q9score,
+            q10score
+        );
         saveScore(paintingScore);
         viewScore(paintingScore);
     }
@@ -292,8 +303,18 @@ public class PaintingActivity extends MainActivity {
     /**
      * This method calculate the score.
      */
-    public int calculateScore(int q1score, int q2score, int q3score, int q4score, int q5score,
-                              int q6score, int q7score, int q8score, int q9score, int q10score) {
+    public int calculateScore(
+        int q1score,
+        int q2score,
+        int q3score,
+        int q4score,
+        int q5score,
+        int q6score,
+        int q7score,
+        int q8score,
+        int q9score,
+        int q10score
+    ){
         int score;
         score = q1score + q2score + q3score + q4score + q5score + q6score + q7score + q8score + q9score + q10score;
         return score;

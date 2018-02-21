@@ -183,7 +183,10 @@ public class ArchitectureActivity extends MainActivity {
 
         String architectureQ2A1Text = architectureQ2A1.getText().toString().toLowerCase();
 
-        if (architectureQ2A1Text.equals(getString(R.string.architectureQ2Afillipobrunelleschi).toLowerCase()) || architectureQ2A1Text.equals(getString(R.string.architectureQ2Abrunelleschi).toLowerCase()) || architectureQ2A1Text.equals(getString(R.string.architectureQ2Abrunelleschifillipo).toLowerCase())) {
+        if (architectureQ2A1Text.equals(getString(R.string.architectureQ2Afillipobrunelleschi).toLowerCase())
+                || architectureQ2A1Text.equals(getString(R.string.architectureQ2Abrunelleschi).toLowerCase())
+                || architectureQ2A1Text.equals(getString(R.string.architectureQ2Abrunelleschifillipo).toLowerCase())
+                ){
             q2score = 1;
             q2check = getString(R.string.correct);
             displayQ2Check();
@@ -284,7 +287,18 @@ public class ArchitectureActivity extends MainActivity {
             displayQ10Check();
         }
 
-        int architectureScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
+        int architectureScore = calculateScore(
+            q1score,
+            q2score,
+            q3score,
+            q4score,
+            q5score,
+            q6score,
+            q7score,
+            q8score,
+            q9score,
+            q10score
+        );
         saveScore(architectureScore);
         viewScore(architectureScore);
     }
@@ -292,8 +306,18 @@ public class ArchitectureActivity extends MainActivity {
     /**
      * This method calculate the score.
      */
-    public int calculateScore(int q1score, int q2score, int q3score, int q4score, int q5score,
-                              int q6score, int q7score, int q8score, int q9score, int q10score) {
+    public int calculateScore(
+        int q1score,
+        int q2score,
+        int q3score,
+        int q4score,
+        int q5score,
+        int q6score,
+        int q7score,
+        int q8score,
+        int q9score,
+        int q10score
+    ){
         int score;
         score = q1score + q2score + q3score + q4score + q5score + q6score + q7score + q8score + q9score + q10score;
         return score;
