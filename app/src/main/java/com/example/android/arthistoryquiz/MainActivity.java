@@ -10,6 +10,13 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int pScore;
+    private int sScore;
+    private int aScore;
+    private String paintingScore;
+    private String sculptureScore;
+    private String architectureScore;
+
     TextView paintingScoreTV;
     TextView sculptureScoreTV;
     TextView architectureScoreTV;
@@ -21,16 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences myPreferences
                 = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-
-        int pScore = myPreferences.getInt("PAINTING", 0);
-
-        int sScore = myPreferences.getInt("SCULPTURE", 0);
-
-        int aScore = myPreferences.getInt("ARCHITECTURE", 0);
-
-        String paintingScore = pScore + "/10";
-        String sculptureScore = sScore + "/10";
-        String architectureScore = aScore + "/10";
+        pScore = myPreferences.getInt("PAINTING", 0);
+        sScore = myPreferences.getInt("SCULPTURE", 0);
+        aScore = myPreferences.getInt("ARCHITECTURE", 0);
+        paintingScore = getString(R.string.of_10, pScore);
+        sculptureScore = getString(R.string.of_10, sScore);
+        architectureScore = getString(R.string.of_10, aScore);
 
         paintingScoreTV = findViewById(R.id.paintingScore);
         paintingScoreTV.setText(paintingScore);
@@ -40,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
         architectureScoreTV = findViewById(R.id.architectureScore);
         architectureScoreTV.setText(architectureScore);
-
     }
 
     @Override
@@ -49,21 +51,15 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences myPreferences
                 = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-
-        int pScore = myPreferences.getInt("PAINTING", 0);
-
-        int sScore = myPreferences.getInt("SCULPTURE", 0);
-
-        int aScore = myPreferences.getInt("ARCHITECTURE", 0);
-
-        String paintingScore = getString(R.string.of_10, pScore);
-        String sculptureScore = getString(R.string.of_10, sScore);
-        String architectureScore = getString(R.string.of_10, aScore);
+        pScore = myPreferences.getInt("PAINTING", 0);
+        sScore = myPreferences.getInt("SCULPTURE", 0);
+        aScore = myPreferences.getInt("ARCHITECTURE", 0);
+        paintingScore = getString(R.string.of_10, pScore);
+        sculptureScore = getString(R.string.of_10, sScore);
+        architectureScore = getString(R.string.of_10, aScore);
 
         paintingScoreTV.setText(paintingScore);
-
         sculptureScoreTV.setText(sculptureScore);
-
         architectureScoreTV.setText(architectureScore);
     }
 

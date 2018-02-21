@@ -17,6 +17,38 @@ import android.widget.Toast;
 
 public class PaintingActivity extends MainActivity {
 
+    static final String QUESTION_ONE = "q1check";
+    static final String QUESTION_TWO = "q2check";
+    static final String QUESTION_THREE = "q3check";
+    static final String QUESTION_FOUR = "q4check";
+    static final String QUESTION_FIVE = "q5check";
+    static final String QUESTION_SIX = "q6check";
+    static final String QUESTION_SEVEN = "q7check";
+    static final String QUESTION_EIGHT = "q8check";
+    static final String QUESTION_NINE = "q9check";
+    static final String QUESTION_TEN = "q10check";
+
+    private int q1score;
+    private int q2score;
+    private int q3score;
+    private int q4score;
+    private int q5score;
+    private int q6score;
+    private int q7score;
+    private int q8score;
+    private int q9score;
+    private int q10score;
+    private String q1check;
+    private String q2check;
+    private String q3check;
+    private String q4check;
+    private String q5check;
+    private String q6check;
+    private String q7check;
+    private String q8check;
+    private String q9check;
+    private String q10check;
+
     RadioButton paintingQ1A1;
     RadioButton paintingQ2A1;
     RadioButton paintingQ3A3;
@@ -29,7 +61,6 @@ public class PaintingActivity extends MainActivity {
     RadioButton paintingQ8A1;
     RadioButton paintingQ9A3;
     EditText paintingQ10A1;
-
     TextView paintingQ1Verify;
     TextView paintingQ2Verify;
     TextView paintingQ3Verify;
@@ -41,44 +72,10 @@ public class PaintingActivity extends MainActivity {
     TextView paintingQ9Verify;
     TextView paintingQ10Verify;
 
-    int q1score = 0;
-    int q2score = 0;
-    int q3score = 0;
-    int q4score = 0;
-    int q5score = 0;
-    int q6score = 0;
-    int q7score = 0;
-    int q8score = 0;
-    int q9score = 0;
-    int q10score = 0;
-
-    static final String QUESTION_ONE = "q1check";
-    static final String QUESTION_TWO = "q2check";
-    static final String QUESTION_THREE = "q3check";
-    static final String QUESTION_FOUR = "q4check";
-    static final String QUESTION_FIVE = "q5check";
-    static final String QUESTION_SIX = "q6check";
-    static final String QUESTION_SEVEN = "q7check";
-    static final String QUESTION_EIGHT = "q8check";
-    static final String QUESTION_NINE = "q9check";
-    static final String QUESTION_TEN = "q10check";
-
-    String q1check = "";
-    String q2check = "";
-    String q3check = "";
-    String q4check = "";
-    String q5check = "";
-    String q6check = "";
-    String q7check = "";
-    String q8check = "";
-    String q9check = "";
-    String q10check = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painting);
-
         paintingQ1A1 = findViewById(R.id.paintingQ1A1);
         paintingQ2A1 = findViewById(R.id.paintingQ2A1);
         paintingQ3A3 = findViewById(R.id.paintingQ3A3);
@@ -153,6 +150,8 @@ public class PaintingActivity extends MainActivity {
 
     /**
      * This method hides keyboard when EditText lose focus.
+     * The source of this method is:
+     * https://stackoverflow.com/questions/8697499/hide-keyboard-when-user-taps-anywhere-else-on-the-screen-in-android/37390091#37390091
      */
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -286,9 +285,7 @@ public class PaintingActivity extends MainActivity {
         }
 
         int paintingScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
-
         saveScore(paintingScore);
-
         viewScore(paintingScore);
     }
 
@@ -299,7 +296,6 @@ public class PaintingActivity extends MainActivity {
                               int q6score, int q7score, int q8score, int q9score, int q10score) {
         int score;
         score = q1score + q2score + q3score + q4score + q5score + q6score + q7score + q8score + q9score + q10score;
-
         return score;
     }
 
@@ -309,9 +305,7 @@ public class PaintingActivity extends MainActivity {
     public void saveScore(int score) {
         SharedPreferences myPreferences
                 = PreferenceManager.getDefaultSharedPreferences(PaintingActivity.this);
-
         SharedPreferences.Editor myEditor = myPreferences.edit();
-
         myEditor.putInt("PAINTING", score);
         myEditor.commit();
     }

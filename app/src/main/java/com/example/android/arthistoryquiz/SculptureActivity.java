@@ -13,41 +13,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class SculptureActivity extends MainActivity {
-
-    RadioButton sculptureQ1A3;
-    RadioButton sculptureQ2A1;
-    EditText sculptureQ3A1;
-    RadioButton sculptureQ4A1;
-    RadioButton sculptureQ5A3;
-    RadioButton sculptureQ6A2;
-    EditText sculptureQ7A1;
-    RadioButton sculptureQ8A3;
-    RadioButton sculptureQ9A1;
-    RadioButton sculptureQ10A3;
-
-    TextView sculptureQ1Verify;
-    TextView sculptureQ2Verify;
-    TextView sculptureQ3Verify;
-    TextView sculptureQ4Verify;
-    TextView sculptureQ5Verify;
-    TextView sculptureQ6Verify;
-    TextView sculptureQ7Verify;
-    TextView sculptureQ8Verify;
-    TextView sculptureQ9Verify;
-    TextView sculptureQ10Verify;
-
-    int q1score = 0;
-    int q2score = 0;
-    int q3score = 0;
-    int q4score = 0;
-    int q5score = 0;
-    int q6score = 0;
-    int q7score = 0;
-    int q8score = 0;
-    int q9score = 0;
-    int q10score = 0;
 
     static final String QUESTION_ONE = "q1check";
     static final String QUESTION_TWO = "q2check";
@@ -60,22 +26,52 @@ public class SculptureActivity extends MainActivity {
     static final String QUESTION_NINE = "q9check";
     static final String QUESTION_TEN = "q10check";
 
-    String q1check = "";
-    String q2check = "";
-    String q3check = "";
-    String q4check = "";
-    String q5check = "";
-    String q6check = "";
-    String q7check = "";
-    String q8check = "";
-    String q9check = "";
-    String q10check = "";
+    private int q1score;
+    private int q2score;
+    private int q3score;
+    private int q4score;
+    private int q5score;
+    private int q6score;
+    private int q7score;
+    private int q8score;
+    private int q9score;
+    private int q10score;
+    private String q1check;
+    private String q2check;
+    private String q3check;
+    private String q4check;
+    private String q5check;
+    private String q6check;
+    private String q7check;
+    private String q8check;
+    private String q9check;
+    private String q10check;
+
+    RadioButton sculptureQ1A3;
+    RadioButton sculptureQ2A1;
+    EditText sculptureQ3A1;
+    RadioButton sculptureQ4A1;
+    RadioButton sculptureQ5A3;
+    RadioButton sculptureQ6A2;
+    EditText sculptureQ7A1;
+    RadioButton sculptureQ8A3;
+    RadioButton sculptureQ9A1;
+    RadioButton sculptureQ10A3;
+    TextView sculptureQ1Verify;
+    TextView sculptureQ2Verify;
+    TextView sculptureQ3Verify;
+    TextView sculptureQ4Verify;
+    TextView sculptureQ5Verify;
+    TextView sculptureQ6Verify;
+    TextView sculptureQ7Verify;
+    TextView sculptureQ8Verify;
+    TextView sculptureQ9Verify;
+    TextView sculptureQ10Verify;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sculpture);
-
         sculptureQ1A3 = findViewById(R.id.sculptureQ1A3);
         sculptureQ2A1 = findViewById(R.id.sculptureQ2A1);
         sculptureQ3A1 = findViewById(R.id.sculptureQ3A1);
@@ -86,7 +82,6 @@ public class SculptureActivity extends MainActivity {
         sculptureQ8A3 = findViewById(R.id.sculptureQ8A3);
         sculptureQ9A1 = findViewById(R.id.sculptureQ9A1);
         sculptureQ10A3 = findViewById(R.id.sculptureQ10A3);
-        
         sculptureQ1Verify = findViewById(R.id.sculptureQ1Verify);
         sculptureQ2Verify = findViewById(R.id.sculptureQ2Verify);
         sculptureQ3Verify = findViewById(R.id.sculptureQ3Verify);
@@ -149,6 +144,8 @@ public class SculptureActivity extends MainActivity {
 
     /**
      * This method hides keyboard when EditText lose focus.
+     * The source of this method is:
+     * https://stackoverflow.com/questions/8697499/hide-keyboard-when-user-taps-anywhere-else-on-the-screen-in-android/37390091#37390091
      */
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -283,7 +280,6 @@ public class SculptureActivity extends MainActivity {
         }
 
         int sculptureScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
-
         saveScore(sculptureScore);
         viewScore(sculptureScore);
     }
@@ -295,7 +291,6 @@ public class SculptureActivity extends MainActivity {
                               int q6score, int q7score, int q8score, int q9score, int q10score) {
         int score;
         score = q1score + q2score + q3score + q4score + q5score + q6score + q7score + q8score + q9score + q10score;
-
         return score;
     }
 
@@ -305,9 +300,7 @@ public class SculptureActivity extends MainActivity {
     public void saveScore(int score) {
         SharedPreferences myPreferences
                 = PreferenceManager.getDefaultSharedPreferences(SculptureActivity.this);
-
         SharedPreferences.Editor myEditor = myPreferences.edit();
-
         myEditor.putInt("SCULPTURE", score);
         myEditor.commit();
     }

@@ -14,8 +14,39 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class ArchitectureActivity extends MainActivity {
+
+    static final String QUESTION_ONE = "q1check";
+    static final String QUESTION_TWO = "q2check";
+    static final String QUESTION_THREE = "q3check";
+    static final String QUESTION_FOUR = "q4check";
+    static final String QUESTION_FIVE = "q5check";
+    static final String QUESTION_SIX = "q6check";
+    static final String QUESTION_SEVEN = "q7check";
+    static final String QUESTION_EIGHT = "q8check";
+    static final String QUESTION_NINE = "q9check";
+    static final String QUESTION_TEN = "q10check";
+
+    private int q1score;
+    private int q2score;
+    private int q3score;
+    private int q4score;
+    private int q5score;
+    private int q6score;
+    private int q7score;
+    private int q8score;
+    private int q9score;
+    private int q10score;
+    private String q1check;
+    private String q2check;
+    private String q3check;
+    private String q4check;
+    private String q5check;
+    private String q6check;
+    private String q7check;
+    private String q8check;
+    private String q9check;
+    private String q10check;
 
     RadioButton architectureQ1A2;
     EditText architectureQ2A1;
@@ -29,7 +60,6 @@ public class ArchitectureActivity extends MainActivity {
     RadioButton architectureQ8A2;
     RadioButton architectureQ9A1;
     RadioButton architectureQ10A2;
-
     TextView architectureQ1Verify;
     TextView architectureQ2Verify;
     TextView architectureQ3Verify;
@@ -41,44 +71,10 @@ public class ArchitectureActivity extends MainActivity {
     TextView architectureQ9Verify;
     TextView architectureQ10Verify;
 
-    int q1score = 0;
-    int q2score = 0;
-    int q3score = 0;
-    int q4score = 0;
-    int q5score = 0;
-    int q6score = 0;
-    int q7score = 0;
-    int q8score = 0;
-    int q9score = 0;
-    int q10score = 0;
-
-    static final String QUESTION_ONE = "q1check";
-    static final String QUESTION_TWO = "q2check";
-    static final String QUESTION_THREE = "q3check";
-    static final String QUESTION_FOUR = "q4check";
-    static final String QUESTION_FIVE = "q5check";
-    static final String QUESTION_SIX = "q6check";
-    static final String QUESTION_SEVEN = "q7check";
-    static final String QUESTION_EIGHT = "q8check";
-    static final String QUESTION_NINE = "q9check";
-    static final String QUESTION_TEN = "q10check";
-
-    String q1check = "";
-    String q2check = "";
-    String q3check = "";
-    String q4check = "";
-    String q5check = "";
-    String q6check = "";
-    String q7check = "";
-    String q8check = "";
-    String q9check = "";
-    String q10check = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.architecture);
-
         architectureQ1A2 = findViewById(R.id.architectureQ1A2);
         architectureQ2A1 = findViewById(R.id.architectureQ2A1);
         architectureQ3A1 = findViewById(R.id.architectureQ3A1);
@@ -91,7 +87,6 @@ public class ArchitectureActivity extends MainActivity {
         architectureQ8A2 = findViewById(R.id.architectureQ8A2);
         architectureQ9A1 = findViewById(R.id.architectureQ9A1);
         architectureQ10A2 = findViewById(R.id.architectureQ10A2);
-
         architectureQ1Verify = findViewById(R.id.architectureQ1Verify);
         architectureQ2Verify = findViewById(R.id.architectureQ2Verify);
         architectureQ3Verify = findViewById(R.id.architectureQ3Verify);
@@ -154,6 +149,8 @@ public class ArchitectureActivity extends MainActivity {
 
     /**
      * This method hides keyboard when EditText lose focus.
+     * The source of this method is:
+     * https://stackoverflow.com/questions/8697499/hide-keyboard-when-user-taps-anywhere-else-on-the-screen-in-android/37390091#37390091
      */
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -288,7 +285,6 @@ public class ArchitectureActivity extends MainActivity {
         }
 
         int architectureScore = calculateScore(q1score, q2score, q3score, q4score, q5score, q6score, q7score, q8score, q9score, q10score);
-
         saveScore(architectureScore);
         viewScore(architectureScore);
     }
@@ -300,7 +296,6 @@ public class ArchitectureActivity extends MainActivity {
                               int q6score, int q7score, int q8score, int q9score, int q10score) {
         int score;
         score = q1score + q2score + q3score + q4score + q5score + q6score + q7score + q8score + q9score + q10score;
-
         return score;
     }
 
@@ -310,9 +305,7 @@ public class ArchitectureActivity extends MainActivity {
     public void saveScore(int score) {
         SharedPreferences myPreferences
                 = PreferenceManager.getDefaultSharedPreferences(ArchitectureActivity.this);
-
         SharedPreferences.Editor myEditor = myPreferences.edit();
-
         myEditor.putInt("ARCHITECTURE", score);
         myEditor.commit();
     }
