@@ -1,1 +1,1 @@
-# Google Challenge Scholarship: Android Basics Art History Quiz
+# Art History Quiz Google Challenge Scholarship: Android Basics
